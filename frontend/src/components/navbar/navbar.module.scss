@@ -1,0 +1,21 @@
+.navbar_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-Navbar);
+    color: var(--color-Navbar_font);
+    padding: 5px 10px;
+
+    p{
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: var(--color-Rosa);
+        font-size: 14px;
+    }
+
+    .logo_container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}

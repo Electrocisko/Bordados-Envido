@@ -1,8 +1,13 @@
+import Navbar from "./components/navbar/Navbar"
 
 
 function App() {
   return (
-    <div>App</div>
+    <>
+    <Navbar/>
+    <h1>Bordados de Gorros</h1>
+    </>
+    
   )
 }
 

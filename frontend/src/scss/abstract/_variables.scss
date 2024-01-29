@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
 
-//Popins??
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
+
+
+
 
 
 :root {
-  --font-personal: 'Epilogue', sans-serif;
-  --color-Almost-White: hsl(0, 0%, 98%);
-  --color-Medium-Gray: hsl(0, 0%, 41%);
-  --color-Almost-Black: hsl(0, 0%, 8%);
+  --font-personal: 'Montserrat', sans-serif;
+  --color-Navbar: hsl(0, 0%, 8%);
+  --color-Navbar_font: white;
+  --color-Rosa: hsl(37, 66%, 93%);
+  --color-Logo-oscuro: hsl(190, 100%, 14%);
 }

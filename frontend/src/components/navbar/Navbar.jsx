@@ -26,18 +26,18 @@ const [showLinks, setShowLinks] = useState(false);
             <Closed color="white" width="26" height="26" />
           </li>
 
-          <li>
+          <li onClick={() => setShowLinks(!showLinks)} >
             <Link to="/">Inicio</Link>
           </li>
-          <li>
+          <li onClick={() => setShowLinks(!showLinks)}>
             {" "}
             <Link to="/productos">Productos</Link>
           </li>
-          <li>
+          <li onClick={() => setShowLinks(!showLinks)}>
             {" "}
             <Link to="/nosotros">Nosotros</Link>
           </li>
-          <li>
+          <li onClick={() => setShowLinks(!showLinks)}>
             {" "}
             <Link to="/contacto">Contacto</Link>
           </li>

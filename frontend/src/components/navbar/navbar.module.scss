@@ -1,12 +1,12 @@
-.navbar_container{
+.navbar_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-Navbar);
     color: var(--color-Navbar_font);
-    padding: 5px 10px;
+    position: relative; //***
 
-    p{
+    p {
         letter-spacing: 1px;
         font-weight: 600;
         color: var(--color-Rosa);
@@ -18,4 +18,23 @@
         align-items: center;
         gap: 20px;
     }
+
+    .icon_hamburguer{
+      margin: 10px;
+    }
+
+
+}
+
+.links_container {
+    //display: none;
+    position: absolute;
+    top: 0px;
+    background-color: var(--color-Navbar);
+    padding: 10px;
+
+    li {
+        margin: 15px 0px;
+    }
+
 }

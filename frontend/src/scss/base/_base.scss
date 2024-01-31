@@ -1,5 +1,7 @@
+@import "../abstract/variables";
+
 html, body {
-    font-family: var(--font-personal);
+    font-family: $MainFont;
 }
 
 p {
@@ -8,6 +10,6 @@ p {
 
 body {
     height: 100dvh;
-  background-color: var(--color-Rosa);
+  background-color: $Rosa;
 }
 

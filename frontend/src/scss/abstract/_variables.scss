@@ -22,7 +22,7 @@ $MainFont: 'Montserrat', sans-serif;
  @mixin breakpoint ($point) {
   @if $point == md {
     // 768px
-    @media  (min-width: 400px) {
+    @media  (min-width: 768px) {
       @content;
     }
   }

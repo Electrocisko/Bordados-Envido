@@ -11,25 +11,36 @@
     width: 100%;
 }
 
+
+p {
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--color-Rosa);
+    font-size: 14p
+}
+
 .logo_container {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
+.icon_hamburguer {
+    margin: 10px;
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
 .links_container {
     position: absolute;
     top: 0px;
     right: 0px;
-    background-color: $Dark;
+    background-color: var(--color-Navbar);
     padding: 10px;
     text-align: end;
     padding-right: 10px;
-
-    a {
-        color: $light;
-    }
-
 
     @include breakpoint(md) {
         position: static;
@@ -37,26 +48,19 @@
     }
 }
 
+li {
+    margin: 20px;
+}
+
+a {
+    color: var(--color-Navbar_font);
+}
+
 .display_hide {
     display: none;
+
     @include breakpoint(md) {
         display: block;
-    }
-}
-
-.icon_hamburguer {
-    margin: 10px;
-    @include breakpoint(md) {
-        display: none;
-    }
-}
-
-.ul_list{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    @include breakpoint(md) {
-       flex-direction: row;
     }
 }
 
@@ -65,4 +69,9 @@
     @include breakpoint(md) {
         display: none;
     }
+}
+
+.ul_list{
+    display: flex;
+    justify-content: space-around;
 }

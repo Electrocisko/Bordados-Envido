@@ -17,8 +17,8 @@ function Navbar() {
         <Logo height={"40px"} />
       </div>
        <div className={showLinks ? `${styles.links_container}`: `${styles.links_container} ${styles.display_hide}`}>
-        <ul className="ul-list">
-          <li onClick={() => setShowLinks(!showLinks)} className="close-icon">
+        <ul className={styles.ul_list}>
+          <li onClick={() => setShowLinks(!showLinks)} className={styles.close_icon}>
             <Closed color="white" width="26" height="26" />
           </li>
 

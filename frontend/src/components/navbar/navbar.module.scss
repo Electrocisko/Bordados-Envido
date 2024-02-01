@@ -23,6 +23,7 @@
 
     p {
         font-size: 14px;
+        color: $light;
         @include breakpoint(md) {
             font-size: 18px ;
         }
@@ -38,8 +39,12 @@
     padding: 10px;
     text-align: end;
     padding-right: 10px;
+    width: 150px;
+   height: 100vh;
 
-    a {
+ 
+
+    a{
         color: $light;
     }
 
@@ -67,6 +72,7 @@
 .ul_list{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     @include breakpoint(md) {
        flex-direction: row;
@@ -83,6 +89,9 @@ li {
 
 
 .close_icon {
+    position: relative; 
+    right: -40px;
+    top: 10px;
     display: block;
     @include breakpoint(md) {
         display: none;

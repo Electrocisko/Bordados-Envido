@@ -1,0 +1,22 @@
+@import "../abstract/variables";
+
+
+.title {
+   text-align: center;
+   margin: 5px;
+   font-family: $Cursive;
+   color:  $LogoOscuro;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productosContainer {
+  display: flex;
+  justify-content: center;
+flex-wrap: wrap;
+
+}

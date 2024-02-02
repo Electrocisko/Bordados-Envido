@@ -22,6 +22,7 @@ $Cursive: 'Dancing Script', cursive;
  $light: white;
  $Rosa: hsl(37, 66%, 93%);
  $LogoOscuro: hsl(190, 100%, 14%);
+ $WhatsappGreen: #7AD06D;
 
  @mixin breakpoint ($point) {
   @if $point == md {

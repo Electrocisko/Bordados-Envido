@@ -1,10 +1,60 @@
 @import "../abstract/variables";
 
+
+.mainContainer {
+
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+        margin-right: 5px;
+    }
+}
+
+.imagesContainer {
+
+    @include breakpoint(md) {
+        width: 60%;
+    }
+}
+
+.textContainer {
+
+    @include breakpoint(md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // align-items: center;
+    }
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.paragraphsContainer {
+
+    @include breakpoint(md){
+       width: 70%;
+    }
+}
+
 .title {
     text-align: center;
     color: $LogoOscuro ;
     font-size: 1.5rem;
-}   
+    // margin: 30px 0px;
+    font-size: 2rem;
+}
 
 .image {
     padding: 15px;
@@ -16,12 +66,21 @@
 }
 
 .contact {
-   display: flex;
- gap: 30px;
- justify-content: center;
- align-items: center;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
 
- h2 {
-    color:  $WhatsappGreen;
- }
+    h2 {
+        color: $WhatsappGreen;
+    }
+}
+
+.desktopText {
+
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+    }
 }

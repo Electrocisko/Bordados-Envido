@@ -2,6 +2,12 @@
 
 .container {
     margin: 15px;
+
+    @include breakpoint(md) {
+     display: flex;
+     text-align: center;
+     justify-content: space-around;
+    }
 }
 
 .title{
@@ -14,6 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: start;
     padding: 0px;
     gap: 40px;
     margin-bottom: 30px;
@@ -23,13 +30,14 @@
         font-weight: 600;
         color: $Dark;
         font-size: 18px;
-       
+
         p {
             font-weight: 600;
             margin: 0px 10px;
             font-size: 18px;
         }
     }
+
 }
 
 .instagram {
@@ -41,4 +49,12 @@
     display: flex;
     align-items: center;
     gap: 10px;  
+}
+
+.liText {
+
+    @include breakpoint(md) {
+       margin-bottom: 30px ;
+       text-align: start;
+    }
 }

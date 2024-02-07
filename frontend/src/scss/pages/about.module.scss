@@ -1,5 +1,11 @@
-.title {
+@import "../abstract/variables";
+
+.title {    
     text-align: center;
+
+    @include breakpoint(md) {
+       margin: 15px 0px;
+       }
 }
 
 .text {
@@ -8,5 +14,9 @@
    p {
     margin-bottom: 5px;
     line-height: 30px;
+   }
+
+   @include breakpoint(md) {
+    text-align: center;
    }
 }

@@ -46,8 +46,12 @@
 
     a  {
         color: $light;
-      
     }
+
+    // Lo veo con el cliente si quiere hacer un efecto hover
+    // a:hover {
+    //     color: red;
+    //   }
 
     a[class="active"] {
         border: 1px solid white;

@@ -35,8 +35,12 @@ function Navbar() {
           <li onClick={() => setShowLinks(!showLinks)}>
             <NavLink to="/">Inicio</NavLink>
           </li>
-          <li onClick={() => setShowLinks(!showLinks)}>
+          <li onClick={() => setShowLinks(!showLinks)} className={styles.dropdwon}>
             <NavLink to="/productos">Productos</NavLink>
+            <ul className={styles.subMenu}>
+              <li><Link>Gorros</Link></li>
+              <li><Link>Parches</Link></li>
+            </ul>
           </li>
           <li onClick={() => setShowLinks(!showLinks)}>
             <NavLink to="/nosotros">Nosotros</NavLink>

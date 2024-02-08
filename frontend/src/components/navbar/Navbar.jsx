@@ -4,7 +4,7 @@ import Hamburguer from "../icons/Hamburguer";
 import Logo from "../icons/Logo";
 //import "./navbar.css";
 import styles from "./navbar.module.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
@@ -33,16 +33,16 @@ function Navbar() {
             <Closed color="white" width="26" height="26" />
           </li>
           <li onClick={() => setShowLinks(!showLinks)}>
-            <Link to="/">Inicio</Link>
+            <NavLink to="/">Inicio</NavLink>
           </li>
           <li onClick={() => setShowLinks(!showLinks)}>
-            <Link to="/productos">Productos</Link>
+            <NavLink to="/productos">Productos</NavLink>
           </li>
           <li onClick={() => setShowLinks(!showLinks)}>
-            <Link to="/nosotros">Nosotros</Link>
+            <NavLink to="/nosotros">Nosotros</NavLink>
           </li>
           <li onClick={() => setShowLinks(!showLinks)}>
-            <Link to="/contacto">Contacto</Link>
+            <NavLink to="/contacto">Contacto</NavLink>
           </li>
         </ul>
       </div>

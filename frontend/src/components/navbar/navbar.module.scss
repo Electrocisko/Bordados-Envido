@@ -44,9 +44,16 @@
 
  
 
-    a{
+    a  {
         color: $light;
+      
     }
+
+    a[class="active"] {
+        border: 1px solid white;
+        padding: 7px;
+        border-radius: 5px;
+      }
 
     @include breakpoint(md) {
         position: static;
@@ -98,3 +105,4 @@ li {
         display: none;
     }
 }
+

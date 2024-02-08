@@ -68,11 +68,17 @@
 .contact {
     display: flex;
     gap: 30px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+ 
 
     h2 {
         color: $WhatsappGreen;
+    }
+
+    @include breakpoint(md) {
+        margin-left: 15px;
+        justify-content: start;
     }
 }
 

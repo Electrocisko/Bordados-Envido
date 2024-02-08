@@ -32,7 +32,7 @@ function Contact() {
         11 5043-6661
       </a>
     </div>
-    <div className={styles.text}>
+    <div className={styles.textContainer}>
     <ol>
       <li className={styles.liText}>Elegí una gorra en la página Productos</li>
       <li className={styles.liText}>

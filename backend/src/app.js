@@ -3,6 +3,8 @@ import dotenvConfig from './config/dotenvConfig.js';
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
+import viewsRouter from "./routes/viewsRouters.js";
+import productsRouter from "./routes/productsRouter.js";
 
 const PORT = dotenvConfig.app.PORT;
 const app = express();
@@ -18,11 +20,8 @@ app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 
 
-
-app.get('/',(req,res) => {
-    res.render("index.ejs")
-   })
-
+app.use('/admin', viewsRouter);
+app.use('/api', productsRouter );
 
 app.listen(PORT, () => {
     console.log('server http://localhost:'+PORT);

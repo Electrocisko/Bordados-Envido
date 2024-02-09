@@ -5,9 +5,12 @@ import Logo from "../icons/Logo";
 //import "./navbar.css";
 import styles from "./navbar.module.scss";
 import { Link, NavLink } from "react-router-dom";
+import Expand from "../icons/Expand";
+import Retract from "../icons/Retract";
 
 function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
+  const [showSubMenu, setShowSubMenu] = useState(true);
 
   return (
     <nav className={styles.navbar_container}>
@@ -33,20 +36,33 @@ function Navbar() {
             <Closed color="white" width="26" height="26" />
           </li>
           <li onClick={() => setShowLinks(!showLinks)}>
-            <NavLink to="/">Inicio</NavLink>
+            <NavLink to="/"  onClick={() => setShowSubMenu(false)}>Inicio</NavLink>
           </li>
-          <li onClick={() => setShowLinks(!showLinks)} className={styles.dropdwon}>
-            <NavLink to="/productos">Productos</NavLink>
-            <ul className={styles.subMenu}>
-              <li><Link>Gorros</Link></li>
-              <li><Link>Parches</Link></li>
+          <li
+            onClick={() => setShowLinks(!showLinks)}
+            className={styles.dropdwon}
+          >
+            <NavLink className={styles.products} to="/productos" onClick={() => setShowSubMenu(!showSubMenu)}>Productos {!showSubMenu?  <Expand height="24" width="24" fill="white"/> : <Retract height="24" width="24" fill="white" />}    </NavLink>
+            <ul
+              className={
+                showSubMenu
+                  ? `${styles.subMenu}`
+                  : `${styles.subMenu} ${styles.subMenuHide}`
+              }
+            >
+              <li>
+                <Link to="/">Gorros</Link>
+              </li>
+              <li>
+                <Link to="/">Parches</Link>
+              </li>
             </ul>
           </li>
           <li onClick={() => setShowLinks(!showLinks)}>
-            <NavLink to="/nosotros">Nosotros</NavLink>
+            <NavLink to="/nosotros" onClick={() => setShowSubMenu(false)}>Nosotros</NavLink>
           </li>
           <li onClick={() => setShowLinks(!showLinks)}>
-            <NavLink to="/contacto">Contacto</NavLink>
+            <NavLink to="/contacto" onClick={() => setShowSubMenu(false)}>Contacto</NavLink>
           </li>
         </ul>
       </div>

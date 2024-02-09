@@ -96,15 +96,14 @@
     }
 }
 
-
 li {
     margin-bottom: 30px;
+  
 
     @include breakpoint(md) {
         margin-bottom: 0px;
     }
 }
-
 
 .close_icon {
     position: relative;
@@ -117,20 +116,24 @@ li {
     }
 }
 
-ul li ul {
+.products{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.subMenuHide {
     display: none;
 }
 
-ul li:hover ul {
-    margin-top: 20px;
+.subMenu{
     position: absolute;
-    display: block;
-    background-color: black;
+    top: 60px;
+    background-color: red;
+    width: 110px;
     text-align: center;
-    width: 100px;
-
-}
-
-ul li ul li {
-    margin-bottom: 10px;
+    
+    li{
+       margin: 10px 0px;
+    }
 }

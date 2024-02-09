@@ -127,13 +127,21 @@ align-items: center;
 }
 
 .subMenu{
-    position: absolute;
-    top: 60px;
-    background-color: red;
-    width: 110px;
-    text-align: center;
-    
-    li{
-       margin: 10px 0px;
+
+      li{
+           margin: 20px 0px;
+        }
+
+    @include breakpoint(md) {
+        position: absolute;
+        top: 60px;
+        background-color: black;
+        width: 110px;
+        text-align: center;
+        
+        li{
+           margin: 10px 0px;
+        }
     }
-}
+    }
+

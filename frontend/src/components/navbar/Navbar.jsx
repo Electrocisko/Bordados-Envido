@@ -2,7 +2,6 @@ import { useState } from "react";
 import Closed from "../icons/Closed";
 import Hamburguer from "../icons/Hamburguer";
 import Logo from "../icons/Logo";
-//import "./navbar.css";
 import styles from "./navbar.module.scss";
 import { Link, NavLink } from "react-router-dom";
 import Expand from "../icons/Expand";
@@ -10,7 +9,7 @@ import Retract from "../icons/Retract";
 
 function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
-  const [showSubMenu, setShowSubMenu] = useState(true);
+  const [showSubMenu, setShowSubMenu] = useState(false);
 
   return (
     <nav className={styles.navbar_container}>
@@ -38,10 +37,7 @@ function Navbar() {
           <li onClick={() => setShowLinks(!showLinks)}>
             <NavLink to="/"  onClick={() => setShowSubMenu(false)}>Inicio</NavLink>
           </li>
-          <li
-            onClick={() => setShowLinks(!showLinks)}
-            className={styles.dropdwon}
-          >
+          <li className={styles.dropdwon}>
             <NavLink className={styles.products} to="/productos" onClick={() => setShowSubMenu(!showSubMenu)}>Productos {!showSubMenu?  <Expand height="24" width="24" fill="white"/> : <Retract height="24" width="24" fill="white" />}    </NavLink>
             <ul
               className={

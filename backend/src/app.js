@@ -20,7 +20,7 @@ app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 
 
-app.use('/admin', viewsRouter);
+app.use('/', viewsRouter);
 app.use('/api', productsRouter );
 
 app.listen(PORT, () => {

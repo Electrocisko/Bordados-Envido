@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import viewsRouter from "./routes/viewsRouters.js";
 import productsRouter from "./routes/productsRouter.js";
+import connection from './database/connection.js';
 
 const PORT = dotenvConfig.app.PORT;
 const app = express();
@@ -19,7 +20,10 @@ app.use(express.static(__dirname+'/public'));
 app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 
+//Conectando a Base de Datos
+connection();
 
+// routes
 app.use('/', viewsRouter);
 app.use('/api', productsRouter );
 

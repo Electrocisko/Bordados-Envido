@@ -1,5 +1,5 @@
-import {Product} from '../models/productModel.js'
-
+import {Product} from '../models/productModel.js';
+import fs from 'fs';
 
  export const getProducts = async (req,res) => {
     try {
@@ -21,11 +21,15 @@ export const createProduct = async (req,res) => {
     try {
         let newProduct = req.body;
         newProduct.image = req.file.filename;
-        // modelo, categoria, descripcion, precio, file;
+        //Faltan validaciones!! de los datos que llegan
+        const imageSplit = req.file.filename.split(".");
+        const extension = imageSplit[1];
+        if (extension != "png" && extension != "jpg" && extension != "webp") {
+            throw new Error("Archivo adjunto no valido.");
+        }
 
         if(req.file.size > 300000) throw new Error("Ups muy pesado");
         
-
         let product = new Product(newProduct);
         let data = await product.save();
         res.status(200).json({
@@ -33,6 +37,8 @@ export const createProduct = async (req,res) => {
           data,
         });
     } catch (error) {
+        const filePath = req.file.path;
+        fs.unlinkSync(filePath);
         res.status(500).json({
             status: "error",
             message: "Error en crear producto",

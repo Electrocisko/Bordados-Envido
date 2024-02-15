@@ -5,6 +5,7 @@ import Contact from '../pages/Contact';
 import Products from '../pages/Products';
 import LayoutPublic from '../layout/LayoutPublic';
 import { loaderProducts } from '../loaders/loaderProducts';
+import {loaderProductsByCat} from "../loaders/loaderProductsByCat"
 
 export const router = createBrowserRouter([
     {
@@ -24,9 +25,14 @@ export const router = createBrowserRouter([
                 element: <Contact/>
             },
             {
-                path: "productos",
+                path: "/productos",
                 element: <Products/>,
                 loader: loaderProducts
+            },
+            {
+                path:"/productos/:cat",
+                element: <Products/>,
+                loader: loaderProductsByCat
             }
         ]
     }

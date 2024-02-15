@@ -47,16 +47,16 @@ function Navbar() {
               }
             >
               <li>
-                <Link to="/">Gorros</Link>
+                <Link to="/productos/gorros">Gorros</Link>
               </li>
               <li>
-                <Link to="/">Parches</Link>
+                <Link to="/productos/parches">Parches</Link>
               </li>
               <li>
-                <Link to="/">Collares</Link>
+                <Link to="/productos/collares">Collares</Link>
               </li>
               <li>
-                <Link to="/">Otros</Link>
+                <Link to="/productos/otros">Otros</Link>
               </li>
             </ul>
           </li>

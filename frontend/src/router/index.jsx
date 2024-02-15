@@ -4,6 +4,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Products from '../pages/Products';
 import LayoutPublic from '../layout/LayoutPublic';
+import { loaderProducts } from '../loaders/loaderProducts';
 
 export const router = createBrowserRouter([
     {
@@ -24,7 +25,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: "productos",
-                element: <Products/>
+                element: <Products/>,
+                loader: loaderProducts
             }
         ]
     }

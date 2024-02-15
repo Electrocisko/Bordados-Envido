@@ -6,11 +6,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 import viewsRouter from "./routes/viewsRouters.js";
 import productsRouter from "./routes/productsRouter.js";
 import connection from './database/connection.js';
+import cors from 'cors';
 
 const PORT = dotenvConfig.app.PORT;
 const app = express();
 
 //midlewars
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname+'/public'));

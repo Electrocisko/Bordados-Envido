@@ -1,7 +1,12 @@
+@import "../../scss/abstract/variables";
+
 .cardContainer {
     margin: 10px;
     padding: 10px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .name {
@@ -14,4 +19,20 @@
 
 .price {
     text-align: center;
+}
+
+.imageContainer {
+    height: 100%;
+}
+
+
+.image {
+   max-width: 100%;
+
+   @include breakpoint(md) {
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+   }
+   
 }

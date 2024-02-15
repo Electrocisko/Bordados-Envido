@@ -45,10 +45,22 @@ export const createProduct = async (req,res) => {
             error: error.message
         })
     }
+}
 
-
-
-
-
-
+export const getProductsCat = async (req,res) => {
+    try {
+        console.log(req.params);
+        let param = req.params;
+        const data = await Product.find({categoria: param.cat }).lean();
+        res.status(200).json({
+            status:"succes",
+            data
+        })
+    } catch (error) {
+        res.status(500).json({
+            status: "error",
+            message: "Error en mostrar productos por categoria",
+            error: error.message
+        })
+    }
 }

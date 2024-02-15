@@ -52,6 +52,12 @@ function Navbar() {
               <li>
                 <Link to="/">Parches</Link>
               </li>
+              <li>
+                <Link to="/">Collares</Link>
+              </li>
+              <li>
+                <Link to="/">Otros</Link>
+              </li>
             </ul>
           </li>
           <li onClick={() => setShowLinks(!showLinks)}>

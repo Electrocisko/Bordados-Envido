@@ -73,14 +73,13 @@ export const getProductsCat = async (req, res) => {
 };
 
 export const deleteProductById = async (req, res) => {
-
-//ME FALTA BORRAR EL ARCHIVO DE IMAGEN 
-
   try {
     const id = req.params.id;
     if (!mongoose.Types.ObjectId.isValid(id))
       throw new Error("Id de artista no valido");
     let result = await Product.findByIdAndDelete(id);
+    // Borro el archivo
+    fs.unlinkSync(`src/public/images/${result.image}`);
     if (result == null) throw new Error("No se encontro producto con ese Id");
     res.status(200).json({
       status: "succes",

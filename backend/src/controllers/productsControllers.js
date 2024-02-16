@@ -1,4 +1,5 @@
 import { Product } from "../models/productModel.js";
+import mongoose from "mongoose";
 import fs from "fs";
 
 export const getProducts = async (req, res) => {
@@ -19,7 +20,7 @@ export const getProducts = async (req, res) => {
 export const createProduct = async (req, res) => {
   try {
     let newProduct = req.body;
-    const {modelo, categoria, precio } = newProduct;
+    const { modelo, categoria, precio } = newProduct;
     if (req.file) {
       newProduct.image = req.file.filename;
       const imageSplit = req.file.filename.split(".");
@@ -33,7 +34,7 @@ export const createProduct = async (req, res) => {
       newProduct.image = "logo-envido.png";
     }
     if (!modelo || categoria == "Seleccione categoría" || !precio) {
-        throw new Error("Falta datos")
+      throw new Error("Falta datos");
     }
     let product = new Product(newProduct);
     let data = await product.save();
@@ -66,6 +67,29 @@ export const getProductsCat = async (req, res) => {
     res.status(500).json({
       status: "error",
       message: "Error en mostrar productos por categoria",
+      error: error.message,
+    });
+  }
+};
+
+export const deleteProductById = async (req, res) => {
+
+//ME FALTA BORRAR EL ARCHIVO DE IMAGEN 
+
+  try {
+    const id = req.params.id;
+    if (!mongoose.Types.ObjectId.isValid(id))
+      throw new Error("Id de artista no valido");
+    let result = await Product.findByIdAndDelete(id);
+    if (result == null) throw new Error("No se encontro producto con ese Id");
+    res.status(200).json({
+      status: "succes",
+      message: "Producto eliminado ",
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: "error",
+      message: "Error en borrar producto por su Id",
       error: error.message,
     });
   }

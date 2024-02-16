@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.get("/productos", getProducts);
 router.get("/productos/:cat", getProductsCat);
-
 router.post("/ingresar", upLoader.single("file"), createProduct);
 
 

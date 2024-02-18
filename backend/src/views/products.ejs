@@ -31,11 +31,10 @@
                 <tr>
                     <th scope="row"><%= element._id %></th>
                     <td><%= element.modelo %></td>
-                    <td><%= element.precio %></td>
-                    <td><%= element.image %></td>
+                    <td>$<%= element.precio %></td>
+                    <td><img src="./images/<%= element.image %>"  alt="Logo" style="height: 50px"></td>
                     <td> <button class="btn btn-warning btn-sm modified" name="<%= element._id %>">Modificar</button></td>
                     <td> <button   class="btn btn-danger btn-sm delete " name="<%= element._id %>">Eliminar</button></td>
-                    <!-- onclick="console.log(`eliminar <%= element._id %>`)" -->
                   </tr>
             <% }) %>
         </tbody>

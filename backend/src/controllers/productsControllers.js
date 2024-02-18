@@ -76,7 +76,7 @@ export const deleteProductById = async (req, res) => {
   try {
     const id = req.params.id;
     if (!mongoose.Types.ObjectId.isValid(id))
-      throw new Error("Id de artista no valido");
+      throw new Error("Id  no valido");
     let result = await Product.findByIdAndDelete(id);
     // Borro el archivo
     fs.unlinkSync(`src/public/images/${result.image}`);
@@ -93,3 +93,47 @@ export const deleteProductById = async (req, res) => {
     });
   }
 };
+
+export const modifiedProductById = async (req,res) => {
+  try {
+    const id = req.params.id;
+    if (!mongoose.Types.ObjectId.isValid(id))
+      throw new Error("Id  no valido");
+      let data = req.body;
+      if (req.file) {
+        const oldData = await Product.findById(id);
+        //Borro la imagen anterior
+        fs.unlinkSync(`src/public/images/${oldData.image}`);
+        data.image = req.file.filename;
+        const imageSplit = req.file.filename.split(".");
+        const extension = imageSplit[1];
+        if (extension != "png" && extension != "jpg" && extension != "webp") {
+          throw new Error("Archivo adjunto no valido.");
+        };
+        if (req.file.size > 300000) {
+          throw new Error("El archivo no puede superar 300Kb");
+        }
+      }
+      // ver validaciones??
+      //Ver modificar imagen
+
+    let modifiedProduct = await Product.findByIdAndUpdate(id, data)
+
+    res.status(200).json({
+      status: "succes",
+      message: "Producto Modificado ",
+      modifiedProduct,
+      
+    });
+  } catch (error) {
+    if (req.file) {
+      const filePath = req.file.path;
+      fs.unlinkSync(filePath);
+    }
+    res.status(500).json({
+      status: "error",
+      message: "Error en modificar producto por su Id",
+      error: error.message,
+    });
+  }
+}

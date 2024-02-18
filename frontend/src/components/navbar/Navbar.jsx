@@ -38,7 +38,7 @@ function Navbar() {
             <NavLink to="/"  onClick={() => setShowSubMenu(false)}>Inicio</NavLink>
           </li>
           <li className={styles.dropdwon}>
-            <NavLink className={styles.products} to="/productos" onClick={() => setShowSubMenu(!showSubMenu)}>Productos {!showSubMenu?  <Expand height="24" width="24" fill="white"/> : <Retract height="24" width="24" fill="white" />}    </NavLink>
+            <li className={styles.products}  onClick={() => setShowSubMenu(!showSubMenu)}>Productos {!showSubMenu?  <Expand height="24" width="24" fill="white"/> : <Retract height="24" width="24" fill="white" />}    </li>
             <ul
               className={
                 showSubMenu
@@ -47,16 +47,16 @@ function Navbar() {
               }
             >
               <li>
-                <Link to="/productos/gorros">Gorros</Link>
+                <NavLink to="/productos/gorros">Gorros</NavLink>
               </li>
               <li>
-                <Link to="/productos/parches">Parches</Link>
+                <NavLink to="/productos/parches">Parches</NavLink>
               </li>
               <li>
-                <Link to="/productos/collares">Collares</Link>
+                <NavLink to="/productos/collares">Collares</NavLink>
               </li>
               <li>
-                <Link to="/productos/otros">Otros</Link>
+                <NavLink to="/productos/otros">Otros</NavLink>
               </li>
             </ul>
           </li>

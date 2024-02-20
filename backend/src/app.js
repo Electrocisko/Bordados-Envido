@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 import viewsRouter from "./routes/viewsRouters.js";
 import productsRouter from "./routes/productsRouter.js";
+import loginRouter from "./routes/sessionsRouter.js";
 import connection from './database/connection.js';
 import cors from 'cors';
 
@@ -28,6 +29,7 @@ connection();
 // routes
 app.use('/', viewsRouter);
 app.use('/api', productsRouter );
+app.use('/api', loginRouter);
 
 app.listen(PORT, () => {
     console.log('server http://localhost:'+PORT);

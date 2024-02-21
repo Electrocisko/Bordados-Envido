@@ -4,11 +4,12 @@ import {getProducts, createProduct, getProductsCat, deleteProductById, modifiedP
 
 const router = express.Router();
 
-router.get("/productos", getProducts);
-router.get("/productos/:cat", getProductsCat);
-router.post("/ingresar", upLoader.single("file"), createProduct);
-router.delete("/eliminar/:id",deleteProductById);
-router.patch("/modificar/:id", upLoader.single("file"), modifiedProductById);
+router.get("/productos", getProducts); // Publico
+router.get("/productos/:cat", getProductsCat); //Publico
+
+router.post("/ingresar", upLoader.single("file"), createProduct); // Privado
+router.delete("/eliminar/:id",deleteProductById); //Privado
+router.patch("/modificar/:id", upLoader.single("file"), modifiedProductById); //Privado
 
 
 

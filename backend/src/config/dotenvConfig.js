@@ -12,6 +12,7 @@ export default {
     },
     session: {
         ADMIN: process.env.ADMIN,
-        PASS: process.env.PASS
+        PASS: process.env.PASS,
+        SECRET_JWT: process.env.SECRET_JWT
     }
 }

@@ -1,7 +1,5 @@
 const loginForm = document.querySelector(".login");
-
 const URL = "http://localhost:8080/api/login";
-
 
 loginForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
@@ -16,7 +14,10 @@ loginForm.addEventListener("submit", (evt) => {
       },
     })
       .then((result) => result.json())
-      .then((json) => console.log(json))
+      .then((json) =>{
+        console.log(json)
+      } 
+      )
       .catch((error) => {
         console.log(`Error en peticion login.js fetch: ${error}`);
       });

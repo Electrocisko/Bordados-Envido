@@ -1,6 +1,7 @@
 const loginForm = document.querySelector(".login");
 const URL = "http://localhost:8080/api/login";
 
+
 loginForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
     let data = new FormData(loginForm);
@@ -14,8 +15,13 @@ loginForm.addEventListener("submit", (evt) => {
       },
     })
       .then((result) => result.json())
-      .then((json) =>{
-        console.log(json)
+      .then((data) =>{
+     console.log(data);
+     if(data.status === "success") {
+      window.location.href="/admin"  // Se redirige a pagina de admin
+     } else {
+      window.location.href="/"  // Se redirige a pagina de admin
+     }
       } 
       )
       .catch((error) => {

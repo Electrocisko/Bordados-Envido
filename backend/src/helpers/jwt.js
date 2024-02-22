@@ -6,9 +6,9 @@ const secret = dotenvConfig.session.SECRET_JWT;
 
 export const createToken = (admin) => {
     const payload = {
-        nombre: admin.nombre,
+        nombre: "Admin",
         iat: moment().unix(),
-        exp: moment().add(30,"days").unix()
+        exp: moment().add(1,"days").unix()
     }
     return jwt.encode(payload, secret);
 }

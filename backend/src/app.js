@@ -8,6 +8,7 @@ import productsRouter from "./routes/productsRouter.js";
 import loginRouter from "./routes/sessionsRouter.js";
 import connection from './database/connection.js';
 import cors from 'cors';
+import cookieParser from "cookie-parser";
 
 const PORT = dotenvConfig.app.PORT;
 const app = express();
@@ -17,6 +18,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(__dirname+'/public'));
+app.use(cookieParser());
 
 
 // Template config engine

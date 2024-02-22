@@ -39,7 +39,7 @@ export const createProduct = async (req, res) => {
     let product = new Product(newProduct);
     let data = await product.save();
     res.status(200).json({
-      status: "succes",
+      status: "success",
       data,
     });
   } catch (error) {
@@ -60,7 +60,7 @@ export const getProductsCat = async (req, res) => {
     let param = req.params;
     const data = await Product.find({ categoria: param.cat }).lean();
     res.status(200).json({
-      status: "succes",
+      status: "success",
       data,
     });
   } catch (error) {
@@ -82,7 +82,7 @@ export const deleteProductById = async (req, res) => {
     fs.unlinkSync(`src/public/images/${result.image}`);
     if (result == null) throw new Error("No se encontro producto con ese Id");
     res.status(200).json({
-      status: "succes",
+      status: "success",
       message: "Producto eliminado ",
     });
   } catch (error) {

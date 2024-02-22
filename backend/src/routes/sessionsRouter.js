@@ -12,10 +12,15 @@ router.post("/login", (req, res) => {
     const SECRET = dotenvConfig.session.SECRET_JWT;
     if (nombre == ADMIN && pass == PASS) {
       const token = createToken("Admin", SECRET);
+
+      // CooKies???
+      res.cookie("jwt",token)
+
+
+
       res.status(200).json({
-        status: "succes",
-        message: "ok",
-        token,
+        status: "success",
+        message: "ok"
       });
     } else {
         throw new Error("Credenciales No Validos")

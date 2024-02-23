@@ -12,11 +12,8 @@ router.post("/login", (req, res) => {
     const SECRET = dotenvConfig.session.SECRET_JWT;
     if (nombre == ADMIN && pass == PASS) {
       const token = createToken("Admin", SECRET);
-
-      // CooKies???
+      // CooKies
       res.cookie("jwt",token)
-
-
 
       res.status(200).json({
         status: "success",

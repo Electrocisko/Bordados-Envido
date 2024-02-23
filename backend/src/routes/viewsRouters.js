@@ -12,8 +12,9 @@ router.get("/login", (req, res) => {
   res.render("login.ejs");
 });
 
-router.get("/form", (req, res) => {
-  res.render("form.ejs");
+router.get("/form", checkCookie, (req, res) => {
+  let token = req.cookies.jwt;
+  res.render("form.ejs", {token: token});
 });
 
 

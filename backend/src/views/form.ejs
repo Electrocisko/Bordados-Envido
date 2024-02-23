@@ -15,7 +15,7 @@
     <main class="container">
       <h1>Bordados Envido</h1>
 
-      <form class="w-50" id="formulario">
+      <form class="w-50" id="formulario" >
         <div class="mb-3">
           <label for="modelo" class="form-label">Modelo</label>
           <input
@@ -75,7 +75,7 @@
             name="file"
           />
         </div>
-        <button type="submit" class="btn btn-primary">Subir</button>
+        <button  type="submit" class="btn btn-primary">Subir</button>
       </form>
     </main>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -84,6 +84,34 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="./scripts/form.js"></script>
+
+<script>
+const form = document.getElementById("formulario");
+const route = "http://localhost:8080/api/ingresar";
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let data = new FormData(form);
+
+  fetch(route, {
+    method: "POST",
+    headers:{
+      Authorization: '<%= token %>'
+    },
+    body: data,
+  }) 
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.status === "succes") {
+        Swal.fire("Agregado");
+        form.reset();
+      } else {
+        Swal.fire(data.message);
+      }
+    });
+});
+ 
+</script>
+
   </body>
 </html>

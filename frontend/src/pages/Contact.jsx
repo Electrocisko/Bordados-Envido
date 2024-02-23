@@ -11,7 +11,7 @@ function Contact() {
     <div className={styles.container}>
     
     <div className={styles.linksContainer}>
-      <a href="https://api.whatsapp.com/send?phone=05491150436661&text=Hola, Nececito mas informacion!">
+      <a href="https://api.whatsapp.com/send?phone=05491122788440&text=Hola, Nececito mas informacion!">
         <Whatsapp />
       </a>
 
@@ -27,9 +27,9 @@ function Contact() {
         bordadosenvido@gmail.com
       </a>
 
-      <a className={styles.mail} href="tel:+541150436661">
+      <a className={styles.mail} href="tel:+5491122788440">
         <PhoneIcon height="38px" width="38px" />
-        11 5043-6661
+        11 2278-8440
       </a>
     </div>
     <div className={styles.textContainer}>

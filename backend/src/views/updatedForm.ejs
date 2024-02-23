@@ -105,8 +105,8 @@
         })
           .then((response) => response.json())
           .then((data) => {
-            if (data.status === "succes") {
-              Swal.fire("Agregado");
+            if (data.status === "success") {
+              Swal.fire("Modificado!");
             } else {
               Swal.fire(data.message);
             }
@@ -114,7 +114,7 @@
           .then(
             setTimeout(() => {
              window.location.href="/admin";
-            }, 3000)
+            }, 2000)
           )
       });
     </script>

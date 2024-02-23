@@ -114,13 +114,12 @@ export const modifiedProductById = async (req,res) => {
           throw new Error("El archivo no puede superar 300Kb");
         }
       }
-      // ver validaciones??
-      //Ver modificar imagen
-
+ 
+//Modifica imagen si es que hay
     let modifiedProduct = await Product.findByIdAndUpdate(id, data)
 
     res.status(200).json({
-      status: "succes",
+      status: "success",
       message: "Producto Modificado ",
       modifiedProduct,
       

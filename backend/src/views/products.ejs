@@ -40,7 +40,7 @@
           </td>
           <td>
             <button
-            onclick="updatedItem('<%= element._id %>')"
+              onclick="updatedItem('<%= element._id %>')"
               class="btn btn-warning btn-sm modified"
               name="<%= element._id %>"
             >
@@ -49,7 +49,7 @@
           </td>
           <td>
             <button
-              onclick="deleteItem('<%= element._id %>','<%= token %>')"
+              onclick="confirmOperacion('<%= element._id %>','<%= token %>')"
               class="btn btn-danger btn-sm delete"
               name="<%= element._id %>"
             >
@@ -68,8 +68,25 @@
     ></script>
 
     <script>
+      const confirmOperacion = (id, token) => {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            deleteItem(id, token);
+          }
+        });
+      };
+
       // Function que hace fetch y manda el id y token
-      function deleteItem(id, token) {
+
+      const deleteItem = (id, token) => {
         let url = `http://localhost:8080/api/eliminar/${id}`;
 
         fetch(url, {
@@ -84,17 +101,16 @@
               Swal.fire(data.message);
             }
             if (data.status === "success") {
-              Swal.fire("Borrado!", "El producto fue eliminado.", "success");
+              Swal.fire("Borrado!");
             }
           })
-          .then(location.reload())
-          .catch((error) => console.log(error));
+          .catch((error) => console.log(error))
+          .finally(window.location.reload());
+      };
+      //funcion que me manda al formulario con el id en params
+      function updatedItem(id) {
+        window.location.href = `/modificar/${id}`;
       }
-    //funcion que me manda al formulario con el id en params
-    function updatedItem(id) {
-      window.location.href=`/modificar/${id}`
-    }
     </script>
-
   </body>
 </html>

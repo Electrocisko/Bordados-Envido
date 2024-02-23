@@ -1,5 +1,5 @@
 const loginForm = document.querySelector(".login");
-const URL = "http://localhost:8080/api/login";
+const URL = "api/login";
 
 
 loginForm.addEventListener("submit", (evt) => {

@@ -14,6 +14,10 @@
   <body class="container">
     <h1>Lista de productos</h1>
 
+    <a href="/form"><button class="btn btn-success  mb-5"> Ingresar Producto Nuevo</button></a>
+
+    
+
     <table class="table">
       <thead>
         <tr>
@@ -87,7 +91,7 @@
       // Function que hace fetch y manda el id y token
 
       const deleteItem = (id, token) => {
-        let url = `http://localhost:8080/api/eliminar/${id}`;
+        let url = `api/eliminar/${id}`;
 
         fetch(url, {
           method: "DELETE",

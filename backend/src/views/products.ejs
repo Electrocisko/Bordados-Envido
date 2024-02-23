@@ -40,6 +40,7 @@
           </td>
           <td>
             <button
+            onclick="updatedItem('<%= element._id %>')"
               class="btn btn-warning btn-sm modified"
               name="<%= element._id %>"
             >
@@ -67,6 +68,7 @@
     ></script>
 
     <script>
+      // Function que hace fetch y manda el id y token
       function deleteItem(id, token) {
         let url = `http://localhost:8080/api/eliminar/${id}`;
 
@@ -88,6 +90,10 @@
           .then(location.reload())
           .catch((error) => console.log(error));
       }
+    //funcion que me manda al formulario con el id en params
+    function updatedItem(id) {
+      window.location.href=`/modificar/${id}`
+    }
     </script>
 
   </body>

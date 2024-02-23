@@ -18,9 +18,9 @@ loginForm.addEventListener("submit", (evt) => {
       .then((data) =>{
      console.log(data);
      if(data.status === "success") {
-      window.location.href="/admin"  // Se redirige a pagina de admin
-     } else {
       window.location.href="/"  // Se redirige a pagina de admin
+     } else {
+      window.location.href="/login"  // Se redirige a pagina de admin
      }
       } 
       )

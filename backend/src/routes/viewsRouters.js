@@ -5,8 +5,16 @@ import checkCookie from "../middlewares/checkToken.js";
 
 const router = express.Router();
 
+
 router.get("/", (req, res) => {
-  res.render("index.ejs");
+let userLoged = false;
+
+  if (req.cookies.jwt) {
+userLoged = true;
+  }
+
+
+  res.render("index.ejs", {userLoged: userLoged});
 });
 
 router.get("/login", (req, res) => {

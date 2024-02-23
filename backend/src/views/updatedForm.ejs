@@ -90,7 +90,7 @@
 
     <script>
       const form = document.getElementById("formulario");
-      const route = `api/modificar/` + "<%= id %>";
+      const route = `/api/modificar/` + "<%= id %>";
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -105,12 +105,15 @@
         })
           .then((response) => response.json())
           .then((data) => {
+            console.log('SUCCES');
             if (data.status === "success") {
               Swal.fire("Modificado!");
             } else {
+              console.log('TRONNO');
               Swal.fire(data.message);
             }
           })
+          .catch((error) => console.log( JSON.parse(error)))
           .then(
             setTimeout(() => {
              window.location.href="/admin";

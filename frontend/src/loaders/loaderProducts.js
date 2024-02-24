@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/api/productos";
+const url = "https://bordados-bacend-production.up.railway.app/api/productos";
 
 export const loaderProducts = async () => {
   const res = await fetch(url);

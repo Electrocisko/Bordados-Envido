@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import styles from './card.module.scss'
 
-const url = "http://localhost:8080/images/"
+const url = "https://bordados-bacend-production.up.railway.app/images/"
 
 function Card(props) {
   return (

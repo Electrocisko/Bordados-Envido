@@ -69,15 +69,17 @@ function Navbar() {
                   : `${styles.subMenu} ${styles.subMenuHide}`
               }
             >
-              <li>
-                <NavLink to="/productos/parches">Parches</NavLink>
+
+<li>
+                <NavLink to="/productos/collares">Collares</NavLink>
               </li>
+
               <li>
                 <NavLink to="/productos/gorros">Gorros</NavLink>
               </li>
 
               <li>
-                <NavLink to="/productos/collares">Collares</NavLink>
+                <NavLink to="/productos/parches">Parches</NavLink>
               </li>
               <li>
                 <NavLink to="/productos/otros">Otros</NavLink>

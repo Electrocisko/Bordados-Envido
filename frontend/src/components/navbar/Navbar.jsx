@@ -49,12 +49,11 @@ function Navbar() {
               Contacto
             </NavLink>
           </li>
-          <li className={styles.dropdwon}>
+          <ul className={styles.dropdwon}>
             <li
               className={styles.products}
               onClick={() => setShowSubMenu(!showSubMenu)}
             >
-              {" "}
               <NavLink to="/productos">Productos</NavLink>{" "}
               {!showSubMenu ? (
                 <Expand height="24" width="24" fill="white" />
@@ -70,7 +69,7 @@ function Navbar() {
               }
             >
 
-<li>
+              <li>
                 <NavLink to="/productos/collares">Collares</NavLink>
               </li>
 
@@ -85,7 +84,7 @@ function Navbar() {
                 <NavLink to="/productos/otros">Otros</NavLink>
               </li>
             </ul>
-          </li>
+          </ul> 
         </ul>
       </div>
 

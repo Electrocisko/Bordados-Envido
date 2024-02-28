@@ -6,8 +6,9 @@ const LayoutPublic = () => {
 
   return (
     <div>
-      <Navbar />
-      <main className="container">
+       <Navbar />
+     
+      <main className="container navbarFixed">
                 {navigation.state === "loading" && (
                     <div className="loadingContainer" ><h2 className="loading">Cargando ....</h2></div>
                 )}

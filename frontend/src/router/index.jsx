@@ -12,33 +12,29 @@ export const router = createBrowserRouter([
     {
         path:'/',
         element: <LayoutPublic/>,
+        errorElement: <NotFound/>,
         children: [
             {
                 path:"/",
-                element: <Home/>,
-                errorElement: <NotFound/>
+                element: <Home/>
             },
             {
                 path:"/nosotros",
-                element: <About/>,
-                errorElement: <NotFound/>
+                element: <About/>
             },
             {
                 path: "/contacto",
-                element: <Contact/>,
-                errorElement: <NotFound/>
+                element: <Contact/>
             },
             {
                 path: "/productos",
                 element: <Products/>,
-                loader: loaderProducts,
-                errorElement: <NotFound/>
+                loader: loaderProducts
             },
             {
                 path:"/productos/:cat",
                 element: <Products/>,
-                loader: loaderProductsByCat,
-                errorElement: <NotFound/>
+                loader: loaderProductsByCat
             }
         ]
     }

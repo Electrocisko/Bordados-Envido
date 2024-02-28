@@ -11,10 +11,14 @@ function Contact() {
     <div className={styles.container}>
     
     <div className={styles.linksContainer}>
-      <a href="https://api.whatsapp.com/send?phone=05491122788440&text=Hola, Nececito mas informacion!">
+  
+    <a href="https://api.whatsapp.com/send?phone=05491122788440&text=Hola, Nececito mas informacion sobre Bordados Envido. Gracias!">
+    <div className={styles.whatsapp}>
         <Whatsapp />
+        <p>Whatsapp</p>
+        </div>
       </a>
-
+    
       <a href="https://www.instagram.com/bordados.envido/">
         <div className={styles.instagram}>
           <Instagram />

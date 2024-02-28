@@ -2,7 +2,7 @@
 
 function Whatsapp() {
   return (
-    <img src="./images/WhatsAppButtonGreenMedium.svg" alt="Logo Bordados Envido" />
+    <img src="./images/whatsapp.png" alt="Logo whatsapp" height="40px" />
   )
 }
 

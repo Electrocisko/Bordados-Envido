@@ -14,3 +14,23 @@ body {
   background-color: $Rosa;
 }
 
+.loading{
+   text-align: center;
+
+   margin: 100px;
+   position: absolute;
+   top: 20%;
+    z-index: 100;
+    background-color: $Rosa;
+    color:  $LogoOscuro;
+    padding: 30px;
+    border-radius: 15px;
+    width:200px;
+
+}
+
+.loadingContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

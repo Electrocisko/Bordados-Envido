@@ -1,15 +1,21 @@
-import {Outlet} from 'react-router-dom';
-import Navbar from '../components/navbar/Navbar';
+import { Outlet, useNavigation } from "react-router-dom";
+import Navbar from "../components/navbar/Navbar";
 
 const LayoutPublic = () => {
-    return (
-        <div>
-            <Navbar/>
-            <Outlet/>
+  const navigation = useNavigation();
 
-        </div>
+  return (
+    <div>
+      <Navbar />
+      <main className="container">
+                {navigation.state === "loading" && (
+                    <div className="loadingContainer" ><h2 className="loading">Cargando ....</h2></div>
+                )}
+               
+                <Outlet />
+            </main>
+    </div>
+  );
+};
 
-    )
-}
-
-export default LayoutPublic
+export default LayoutPublic;

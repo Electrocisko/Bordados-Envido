@@ -39,6 +39,16 @@ function Navbar() {
               Inicio
             </NavLink>
           </li>
+          <li onClick={() => setShowLinks(!showLinks)}>
+            <NavLink to="/nosotros" onClick={() => setShowSubMenu(false)}>
+              Nosotros
+            </NavLink>
+          </li>
+          <li onClick={() => setShowLinks(!showLinks)}>
+            <NavLink to="/contacto" onClick={() => setShowSubMenu(false)}>
+              Contacto
+            </NavLink>
+          </li>
           <li className={styles.dropdwon}>
             <li
               className={styles.products}
@@ -73,16 +83,6 @@ function Navbar() {
                 <NavLink to="/productos/otros">Otros</NavLink>
               </li>
             </ul>
-          </li>
-          <li onClick={() => setShowLinks(!showLinks)}>
-            <NavLink to="/nosotros" onClick={() => setShowSubMenu(false)}>
-              Nosotros
-            </NavLink>
-          </li>
-          <li onClick={() => setShowLinks(!showLinks)}>
-            <NavLink to="/contacto" onClick={() => setShowSubMenu(false)}>
-              Contacto
-            </NavLink>
           </li>
         </ul>
       </div>

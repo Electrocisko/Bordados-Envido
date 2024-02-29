@@ -3,6 +3,8 @@
 html, body {
     font-family: $MainFont;
     color: $LogoOscuro;
+    min-height: 100%;
+    position: relative;
 }
 
 p {
@@ -10,8 +12,8 @@ p {
 }
 
 body {
-    height: 100dvh;
-  background-color: $Rosa;
+    min-height: 80vh;
+    background-color: $Rosa;
 }
 
 .loading{

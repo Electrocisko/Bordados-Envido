@@ -12,7 +12,7 @@ function Contact() {
     
     <div className={styles.linksContainer}>
   
-    <a href="https://api.whatsapp.com/send?phone=05491122788440&text=Hola, Nececito mas informacion sobre Bordados Envido. Gracias!">
+    <a href="https://api.whatsapp.com/send?phone=05491122788440&text=Hola, Necesito mas informacion sobre Bordados Envido. Gracias!">
     <div className={styles.whatsapp}>
         <Whatsapp />
         <p>Whatsapp</p>

@@ -33,7 +33,7 @@ function Contact() {
 
       <a className={styles.mail} href="tel:+05491126193414">
         <PhoneIcon height="38px" width="38px" />
-        11 2278-8440
+        11 2619-3414
       </a>
     </div>
     <div className={styles.textContainer}>

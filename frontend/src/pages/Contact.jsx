@@ -1,3 +1,4 @@
+import FormContact from "../components/formcontact/FormContact";
 import EmailIcon from "../components/icons/EmailIcon";
 import Instagram from "../components/icons/Instagram";
 import PhoneIcon from "../components/icons/PhoneIcon";
@@ -37,14 +38,7 @@ function Contact() {
       </a>
     </div>
     <div className={styles.textContainer}>
-    <ol>
-      <li className={styles.liText}>Elegí una gorra en la página Productos</li>
-      <li className={styles.liText}>
-        Adjuntanos el diseño, logo, foto, imagen por mail o WhatsApp que
-        queres aplicar a la gorra
-      </li>
-      <li className={styles.liText}>Comunícanos la cantidad que necesitas.</li>
-    </ol>
+<FormContact/>
     </div>
 
   </div>

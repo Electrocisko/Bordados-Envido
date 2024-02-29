@@ -1,0 +1,30 @@
+@import "../../scss/abstract/variables";
+
+.formcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+
+}
+
+.input{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button{
+    padding: 15px;
+    background-color: $NavBar;
+    color: $Rosa;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+
+.label {
+    font-size: 15px;
+    text-align: start;
+}

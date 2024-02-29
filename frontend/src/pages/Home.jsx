@@ -27,15 +27,17 @@ function Home() {
             crear productos únicos.
           </p>
           <p className={styles.text}>
+          Ofrecemos atención tanto a mayoristas como a minoristas.
+          </p>
+          <p className={styles.text}>
             Ya sea que quieras una prenda personalizada para ti, o para
             potenciar la imagen de tu equipo, negocio, empresa o marca,
             ¡nosotros podemos ayudarte!
           </p>
           <div className={styles.desktopText}>
-            <p className={styles.text}>Elegí una gorra en la página Productos</p>
+            <p className={styles.text}>Elegí una gorra en la página Productos.</p>
             <p className={styles.text}>
-              Adjuntanos el diseño, logo, foto, imagen por mail o WhatsApp que
-              queres aplicar a la gorra
+            Adjúntanos el diseño, logo, foto, imagen por mail o WhatsApp que quieres aplicar a la gorra.
             </p>
             <p className={styles.text}>Comunícanos la cantidad que necesitas.</p>
           </div>

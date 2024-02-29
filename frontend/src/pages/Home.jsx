@@ -18,7 +18,7 @@ function Home() {
           <picture className={styles.logo}>
             <Logo height={"100px"} />
           </picture>
-          <h1 className={styles.title}>Bordados Computarizados</h1>
+          <h1 className={styles.title}>Bordados Envido</h1>
         </div>
 
         <div className={styles.paragraphsContainer}>
@@ -43,7 +43,7 @@ function Home() {
 
         <a href="https://api.whatsapp.com/send?phone=05491122788440&text=Hola, Necesito mas informacion sobre Bordados Envido. Gracias!">
           <div className={styles.contact}>
-            <h2>Contactanos!! </h2>
+            <h2>Contactanos</h2>
             <WhatsappGlobe height="40px" width="40px" />
           </div>
         </a>

@@ -15,8 +15,8 @@ function Navbar() {
     <nav className={styles.navbar_container}>
       <Link to="/">
         <div className={styles.logo_container}>
-          <p>BORDADOS ENVIDO</p>
           <Logo height={"40px"} />
+          <p>BORDADOS ENVIDO</p>
         </div>
       </Link>
 

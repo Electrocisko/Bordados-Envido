@@ -1,9 +1,16 @@
+@import "../../scss/abstract/variables";
+
 .footer {
 
     text-align: center;
     font-size: 10px;
+
+    @include breakpoint(md) {
+        
+  
     position:absolute;
     bottom: 2px;
     left: 45%;
+    }
 
 }

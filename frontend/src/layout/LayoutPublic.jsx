@@ -1,6 +1,7 @@
 import { Outlet, useNavigation } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
+import Spinner from "../components/spinner/Spinner";
 
 
 const LayoutPublic = () => {
@@ -12,7 +13,7 @@ const LayoutPublic = () => {
       <main className="container navbarFixed">
         {navigation.state === "loading" && (
           <div className="loadingContainer">
-            <h2 className="loading">Cargando ....</h2>
+            <Spinner/>
           </div>
         )}
         <Outlet />

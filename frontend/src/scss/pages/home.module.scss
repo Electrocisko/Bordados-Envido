@@ -52,8 +52,15 @@
     text-align: center;
     color: $LogoOscuro ;
     font-size: 1.5rem;
-    // margin: 30px 0px;
     font-size: 2rem;
+    margin: 15px;
+
+    @include breakpoint(md) {
+        text-align: center;
+    color: $LogoOscuro ;
+    font-size: 1.5rem;
+    font-size: 2rem;
+    }
 }
 
 .image {

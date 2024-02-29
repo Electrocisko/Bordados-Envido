@@ -41,7 +41,7 @@ function Home() {
           </div>
         </div>
 
-        <a href="https://api.whatsapp.com/send?phone=05491122788440&text=Hola, Necesito mas informacion sobre Bordados Envido. Gracias!">
+        <a href="https://api.whatsapp.com/send?phone=05491126193414&text=Hola, Necesito mas informacion sobre Bordados Envido. Gracias!">
           <div className={styles.contact}>
             <h2>Contactanos</h2>
             <WhatsappGlobe height="40px" width="40px" />

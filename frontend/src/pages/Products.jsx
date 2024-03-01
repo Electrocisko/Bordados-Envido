@@ -12,7 +12,7 @@ function Products() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Productos</h1>
-      <p>Por precio al mayorista, consultar por el canal de contacto.</p>
+      <p className={styles.p} >Por precio al mayorista, consultar por el canal de contacto.</p>
       <div className={styles.productosContainer}>
 
         {data.map((item) => (

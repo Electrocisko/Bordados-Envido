@@ -8,8 +8,8 @@ function Home() {
       <div className={styles.imagesContainer}>
         <img
           className={styles.image}
-          src="./images/mano-sujetando-gorra-beisbol-blanca-logo-montanas-estampado.jpg"
-          alt="Hombre mostrando una gorra"
+          src="./images/hilo-a.jpg"
+          alt="Hilos de bordar"
         />
       </div>
 

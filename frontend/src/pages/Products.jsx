@@ -1,8 +1,11 @@
 import styles from "../scss/pages/products.module.scss";
 import Card from "../components/card/Card";
 import {useLoaderData} from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 function Products() {
+
+  useTitle({title: "Productos"})
 
   const {products} = useLoaderData();
   const {data} = products

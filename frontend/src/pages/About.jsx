@@ -1,6 +1,11 @@
+import useTitle from "../hooks/useTitle";
 import styles from  "../scss/pages/about.module.scss";
 
+
+
 function About() {
+
+  useTitle({title: "Nosotros"})
   return (
     <div>
     <h1 className={styles.title}>Nosotros</h1>

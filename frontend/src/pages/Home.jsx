@@ -1,8 +1,11 @@
 import Logo from "../components/icons/Logo";
 import WhatsappGlobe from "../components/icons/WhatsappGlobe";
+import useTitle from "../hooks/useTitle";
 import styles from "../scss/pages/home.module.scss";
 
 function Home() {
+
+  useTitle({title: "Home"})
   return (
     <main className={styles.mainContainer}>
       <div className={styles.imagesContainer}>

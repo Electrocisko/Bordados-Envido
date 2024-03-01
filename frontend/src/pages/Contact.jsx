@@ -3,9 +3,12 @@ import EmailIcon from "../components/icons/EmailIcon";
 import Instagram from "../components/icons/Instagram";
 import PhoneIcon from "../components/icons/PhoneIcon";
 import Whatsapp from "../components/icons/Whatsapp";
+import useTitle from "../hooks/useTitle";
 import styles from "../scss/pages/contact.module.scss";
 
 function Contact() {
+
+  useTitle({title: "Contacto"})
   return (
     <>  <h1 className={styles.title}>Contacto</h1>
     

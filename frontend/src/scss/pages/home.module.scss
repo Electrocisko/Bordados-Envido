@@ -6,6 +6,7 @@
     @include breakpoint(md) {
         display: flex;
         justify-content: space-between;
+        gap: 10px;
     }
 }
 
@@ -24,8 +25,8 @@
     @include breakpoint(md) {
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 60%;
+        justify-content:end;
+        margin-left:5%;
     }
 }
 
@@ -34,8 +35,8 @@
     @include breakpoint(md) {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        // align-items: center;
+        align-items: center;
+        margin-right: 5%;
     }
 }
 
@@ -67,8 +68,15 @@
 }
 
 .image {
-    padding: 15px;
+    padding: 0 15px;
     width: 100%;
+   
+
+    @include breakpoint(md) {
+       padding: 0px;
+    }
+
+
 }
 
 .text {

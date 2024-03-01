@@ -8,7 +8,7 @@ function Home() {
       <div className={styles.imagesContainer}>
         <img
           className={styles.image}
-          src="./images/hilo-a.jpg"
+          src="./images/hilo-b.jpg"
           alt="Hilos de bordar"
         />
       </div>

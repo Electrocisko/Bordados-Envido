@@ -11,6 +11,7 @@ function Home() {
           src="./images/hilo-b.jpg"
           alt="Hilos de bordar"
         />
+        <p className={styles.credit}>Foto de cottonbro studio</p>
       </div>
 
       <div className={styles.textContainer}>

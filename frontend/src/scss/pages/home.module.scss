@@ -25,6 +25,7 @@
     @include breakpoint(md) {
         display: flex;
         align-items: center;
+        flex-direction: column;
         justify-content: end;
         margin-left: 5%;
     }
@@ -105,4 +106,9 @@
     @include breakpoint(md) {
         display: block;
     }
+}
+
+.credit {
+    font-size: 8px;
+    text-align: center;
 }

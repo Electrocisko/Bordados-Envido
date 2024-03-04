@@ -16,7 +16,7 @@ function Products() {
       <div className={styles.productosContainer}>
 
         {data.map((item) => (
-          <Card key={item._id} modelo={item.modelo} precio={item.precio} image={item.image}/>
+          <Card key={item._id} modelo={item.modelo} precio={item.precio} image={item.image} nostock={item.nostock}/>
         ))}
       </div>
     </div>

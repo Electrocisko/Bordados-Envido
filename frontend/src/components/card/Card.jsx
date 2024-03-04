@@ -29,9 +29,13 @@ function Card(props) {
           alt="Imagen de Gorro"
         />
         {props.nostock && (
-          <p className={styles.textoImagen}>Consulte disponibilidad</p>
+          <p className={styles.textoImagen}>Consulte Stock</p>
         )}
-        {newPublicac  &&   <p className={styles.nuevo}>Nuevo!</p>}
+        {newPublicac  &&   <div id={styles.triangleTopleft}>
+    <div className={styles.textBlock}>
+      Nuevo!
+    </div>
+  </div>}
       </div>
       <h2 className={styles.name}>{props.modelo}</h2>
       <p className={styles.price}>${props.precio}</p>

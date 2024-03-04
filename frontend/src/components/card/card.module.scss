@@ -41,20 +41,33 @@
 
 .textoImagen{
     position: absolute;
-    bottom: 0px;
+    top: 45%;
+    left: 20%;
     padding: 10px;
+    color:red;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.7;
+    transform: rotate(-45deg);
 
- 
-    color: yellow;
-    font-size: 20px;
-    font-weight: 400;
-    
 }
 
-.nuevo {
+  #triangleTopleft {
     position: absolute;
-    color: red;
-    top: 10px;
-    left: 50px;
-    font-weight: 800;
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-top: 100px solid #17d90d;
+    border-right: 100px solid transparent;
+    }
+  
+  .textBlock {
+    color: white;
+    position: relative;
+    top: -60px;
+    left: 15px;
+    font-weight: bold;
+    padding:5px;
+    transform: rotate(-45deg);
   }

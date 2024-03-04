@@ -9,6 +9,7 @@ function Products() {
 
   const {products} = useLoaderData();
   const {data} = products
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Productos</h1>
@@ -16,7 +17,7 @@ function Products() {
       <div className={styles.productosContainer}>
 
         {data.map((item) => (
-          <Card key={item._id} modelo={item.modelo} precio={item.precio} image={item.image} nostock={item.nostock}/>
+          <Card key={item._id} modelo={item.modelo} precio={item.precio} image={item.image} nostock={item.nostock} iat={item.iat}/>
         ))}
       </div>
     </div>

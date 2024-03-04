@@ -11,6 +11,7 @@
     color: $light;
     width: 100%;
     padding: 10px;
+    z-index: 100;
 
     @include breakpoint(md) {
         align-items: center;

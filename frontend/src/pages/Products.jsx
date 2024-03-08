@@ -1,11 +1,14 @@
 import styles from "../scss/pages/products.module.scss";
 import Card from "../components/card/Card";
-import { useLoaderData, useOutletContext } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import useTitle from "../hooks/useTitle";
+import { useState } from "react";
 
 function Products() {
   useTitle({ title: "Productos" });
-  const [sorting] = useOutletContext();
+
+
+  const [sorting, setSorting] = useState();
   const { products } = useLoaderData();
   const { data } = products;
 

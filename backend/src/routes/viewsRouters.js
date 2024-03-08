@@ -8,12 +8,9 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
 let userLoged = false;
-
   if (req.cookies.jwt) {
 userLoged = true;
   }
-
-
   res.render("index.ejs", {userLoged: userLoged});
 });
 
@@ -43,7 +40,8 @@ router.get("/modificar/:id", checkCookie, async (req, res) => {
 router.get("/admin", checkCookie, async (req, res) => {
   try {
     let token = req.cookies.jwt;
-    const data = await Product.find().lean();
+    //Traigo los productos y los ordeno del mas nuevo al mas viejo
+    const data = await Product.find().sort({nostock: 1, iat: -1}).lean()
     res.render("products.ejs", { data: data, token: token });
   } catch (error) {
     res.status(400).json({

@@ -13,7 +13,8 @@ router.post("/login", (req, res) => {
     if (nombre == ADMIN && pass == PASS) {
       const token = createToken("Admin", SECRET);
       // CooKies
-      res.cookie("jwt",token)
+
+      res.cookie("jwt",token, { httpOnly: true, secure: true})
 
       res.status(200).json({
         status: "success",

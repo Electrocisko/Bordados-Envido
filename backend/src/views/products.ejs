@@ -22,27 +22,42 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">id</th>
+          <th scope="col">Imagen</th>
           <th scope="col">Modelo</th>
           <th scope="col">Precio</th>
-          <th scope="col">Imagen</th>
+          <th scope="col">id</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Actualizado </th>
           <th scope="col">Acciones</th>
+     
           <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
         <% data.forEach(element => { %>
         <tr>
-          <th scope="row"><%= element._id %></th>
-          <td><%= element.modelo %></td>
-          <td>$<%= element.precio %></td>
           <td>
             <img
               src="./images/<%= element.image %>"
-              alt="Logo"
+              alt="Imagen no disponible"
               style="height: 50px"
             />
           </td>
+          <th><%= element.modelo %></th>
+          <td>$<%= element.precio %></td>
+  
+          <td  style="font-size: 12px" scope="row"><%= element._id %></td>
+      
+
+          <% if (element.nostock) { %>
+            <td  style="font-size: 12px; color: red;" scope="row">SIN STOCK</td>
+          <% } %> 
+
+          <% if (!element.nostock) { %>
+            <td  style="font-size: 12px" scope="row">-</td>
+          <% } %> 
+           
+          <td  style="font-size: 12px" scope="row"><%= element.iat %></td>
           <td>
             <button
               onclick="updatedItem('<%= element._id %>')"

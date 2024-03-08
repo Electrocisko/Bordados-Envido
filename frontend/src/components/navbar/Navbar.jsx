@@ -8,18 +8,9 @@ import { Link, NavLink } from "react-router-dom";
 import Expand from "../icons/Expand";
 import Retract from "../icons/Retract";
 
-function Navbar({handleSort}) {
+function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
-  const [showSortMenu, setShowSortMenu] = useState(false);
-
-
-  const  handleClick = (sortBy) => {
-    setShowSortMenu(!showSortMenu)
-    setShowLinks(!showLinks)
-   handleSort(sortBy)
-  }
-
 
   return (
     <nav className={styles.navbar_container}>
@@ -95,31 +86,7 @@ function Navbar({handleSort}) {
             </ul>
           </ul>
 
-          <ul className={styles.dropdwon}>
-            <li
-              className={styles.ordenar}
-              onClick={() => setShowSortMenu(!showSortMenu)}
-            >
-              Orden por:
-              {!showSortMenu ? (
-                <Expand height="24" width="24" fill="white" />
-              ) : (
-                <Retract height="24" width="24" fill="white" />
-              )}
-            </li>
-            <ul
-              className={
-                showSortMenu
-                  ? `${styles.subMenu}`
-                  : `${styles.subMenu} ${styles.subMenuHide}`
-              }
-            >
-              <li className={styles.ordenar} onClick={() => handleClick("nuevos")} id="nuevos"  >Nuevos</li>
-              <li className={styles.ordenar} onClick={() => handleClick("nombre")} id="nombre"  >Nombre</li>
-              <li  className={styles.ordenar} onClick={() => handleClick("viejos")} id="viejos"  >Clasicos</li>
-              <li  className={styles.ordenar} onClick={() => handleClick("precio")} id="precio"  >Precio</li>
-            </ul>
-          </ul>
+        
         </ul>
       </div>
 

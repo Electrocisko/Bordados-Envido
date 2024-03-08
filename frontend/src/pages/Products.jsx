@@ -7,18 +7,22 @@ import { useState } from "react";
 function Products() {
   useTitle({ title: "Productos" });
 
-
   const [sorting, setSorting] = useState();
+
+
   const { products } = useLoaderData();
   const { data } = products;
 
-
-
-
-
-
-
-
+  const handleSorting = (sortBy) => {
+   
+    if (sortBy == "nombre") sortByModel(data);
+    if (sortBy == "ultimospublicados") sortByOldest(data);
+    if (sortBy == "primerospublicados") sortByNew(data);
+    if (sortBy == "menorprecio") sortByMinusPrice(data);
+    if (sortBy == "mayorprecio") sortByMayorPrice(data);
+    setSorting(sortBy)
+  
+  };
 
   const sortByModel = (dataToSort) => {
     dataToSort.sort((a, b) => {
@@ -56,7 +60,25 @@ function Products() {
     });
   };
 
-  const sortByPrice = (dataToSort) => {
+  const sortByMinusPrice = (dataToSort) => {
+
+    console.log("sortbyminus");
+
+    dataToSort.sort((b, a) => {
+      if (a.precio > b.precio) {
+        return 1;
+      }
+      if (a.precio < b.precio) {
+        return -1;
+      }
+      return 0;
+    });
+  };
+
+  const sortByMayorPrice = (dataToSort) => {
+
+    console.log("sortbymayor");
+
     dataToSort.sort((a, b) => {
       if (a.precio > b.precio) {
         return 1;
@@ -68,14 +90,6 @@ function Products() {
     });
   };
 
-
-
-
-  if (sorting == "nombre") sortByModel(data);
-  if (sorting == "viejos") sortByOldest(data);
-  if (sorting == "nuevos") sortByNew(data);
-  if (sorting == "precio") sortByPrice(data);
-
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{products.category}</h1>
@@ -83,20 +97,21 @@ function Products() {
         Por precio al mayorista, consultar por el canal de contacto.
       </p>
       <div>
-      <label htmlFor="cars">Ordenar por: </label>
+        <label htmlFor="sort">Ordenar por: </label>
 
-<select name="cars" id="cars">
-  <option value="volvo">Nombre</option>
-  <option value="saab">Ultimos Publicados</option>
-  <option value="mercedes">Primeros Publicados</option>
-  <option value="audi">Menor precio</option>
-  <option value="audi">Mayor precio</option>
-</select>
+        <select
+          className={styles.option}
+          name="sort"
+          id="sort"
+          onChange={(e) => handleSorting(e.target.value)}
+        >
+          <option value="primerospublicados">Primeros Publicados</option>
+          <option value="ultimospublicados">Ultimos Publicados</option>
+          <option value="menorprecio">Menor precio</option>
+          <option value="mayorprecio">Mayor precio</option>
+          <option value="nombre">Nombre</option>
+        </select>
       </div>
-
-
-
-
 
       <div className={styles.productosContainer}>
         {data.map((item) => (

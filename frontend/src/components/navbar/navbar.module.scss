@@ -100,7 +100,7 @@
 
 li {
     margin-bottom: 30px;
-  
+
 
     @include breakpoint(md) {
         margin-bottom: 0px;
@@ -118,21 +118,21 @@ li {
     }
 }
 
-.products{
+.products {
     display: flex;
-justify-content: center;
-align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .subMenuHide {
     display: none;
 }
 
-.subMenu{
+.subMenu {
 
-      li{
-           margin: 20px 0px;
-        }
+    li {
+        margin: 20px 0px;
+    }
 
     @include breakpoint(md) {
         position: absolute;
@@ -140,10 +140,16 @@ align-items: center;
         background-color: $NavBar;
         width: 110px;
         text-align: center;
-        
-        li{
-           margin: 10px 0px;
+
+        li {
+            margin: 10px 0px;
         }
     }
-    }
+}
 
+.ordenar {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

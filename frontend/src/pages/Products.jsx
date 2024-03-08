@@ -64,8 +64,7 @@ function Products() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Productos</h1>
-
+      <h1 className={styles.title}>{products.category}</h1>
       <p className={styles.p}>
         Por precio al mayorista, consultar por el canal de contacto.
       </p>

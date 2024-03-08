@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import styles from "../scss/pages/products.module.scss";
 import Card from "../components/card/Card";
 import { useLoaderData } from "react-router-dom";
@@ -5,8 +6,6 @@ import useTitle from "../hooks/useTitle";
 import { useState } from "react";
 
 function Products() {
-  useTitle({ title: "Productos" });
-
   const [sorting, setSorting] = useState();
 
 
@@ -61,10 +60,7 @@ function Products() {
   };
 
   const sortByMinusPrice = (dataToSort) => {
-
-    console.log("sortbyminus");
-
-    dataToSort.sort((b, a) => {
+    dataToSort.sort((a, b) => {
       if (a.precio > b.precio) {
         return 1;
       }
@@ -79,7 +75,7 @@ function Products() {
 
     console.log("sortbymayor");
 
-    dataToSort.sort((a, b) => {
+    dataToSort.sort((b, a) => {
       if (a.precio > b.precio) {
         return 1;
       }

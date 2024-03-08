@@ -12,6 +12,14 @@ function Products() {
   const { products } = useLoaderData();
   const { data } = products;
 
+
+
+
+
+
+
+
+
   const sortByModel = (dataToSort) => {
     dataToSort.sort((a, b) => {
       if (a.modelo > b.modelo) {
@@ -60,6 +68,9 @@ function Products() {
     });
   };
 
+
+
+
   if (sorting == "nombre") sortByModel(data);
   if (sorting == "viejos") sortByOldest(data);
   if (sorting == "nuevos") sortByNew(data);
@@ -71,6 +82,22 @@ function Products() {
       <p className={styles.p}>
         Por precio al mayorista, consultar por el canal de contacto.
       </p>
+      <div>
+      <label htmlFor="cars">Ordenar por: </label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Nombre</option>
+  <option value="saab">Ultimos Publicados</option>
+  <option value="mercedes">Primeros Publicados</option>
+  <option value="audi">Menor precio</option>
+  <option value="audi">Mayor precio</option>
+</select>
+      </div>
+
+
+
+
+
       <div className={styles.productosContainer}>
         {data.map((item) => (
           <Card

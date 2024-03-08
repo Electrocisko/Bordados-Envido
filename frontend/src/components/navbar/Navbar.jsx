@@ -15,7 +15,7 @@ function Navbar({handleSort}) {
 
 
   const  handleClick = (sortBy) => {
-    setShowSortMenu(!showSortMenu)
+    setShowLinks(!showLinks)
    handleSort(sortBy)
   }
 
@@ -78,18 +78,18 @@ function Navbar({handleSort}) {
               }
             >
               <li>
-                <NavLink to="/productos/collares">Collares</NavLink>
+                <NavLink to="/productos/collares"  onClick={() => setShowLinks(!showLinks)}>Collares</NavLink>
               </li>
 
               <li>
-                <NavLink to="/productos/gorros">Gorros</NavLink>
+                <NavLink to="/productos/gorros"  onClick={() => setShowLinks(!showLinks)} >Gorros</NavLink>
               </li>
 
               <li>
-                <NavLink to="/productos/parches">Parches</NavLink>
+                <NavLink to="/productos/parches"  onClick={() => setShowLinks(!showLinks)} >Parches</NavLink>
               </li>
               <li>
-                <NavLink to="/productos/otros">Otros</NavLink>
+                <NavLink to="/productos/otros"  onClick={() => setShowLinks(!showLinks)} >Otros</NavLink>
               </li>
             </ul>
           </ul>

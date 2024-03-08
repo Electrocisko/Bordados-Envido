@@ -15,6 +15,7 @@ function Navbar({handleSort}) {
 
 
   const  handleClick = (sortBy) => {
+    setShowSortMenu(!showSortMenu)
     setShowLinks(!showLinks)
    handleSort(sortBy)
   }

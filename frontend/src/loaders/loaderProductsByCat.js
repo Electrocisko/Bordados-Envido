@@ -1,6 +1,5 @@
-//const url = "https://bordados-bacend-production.up.railway.app/api/productos/";
 
-const url = "http://localhost:8080/api/productos/"
+const url = "https://bordados-server-production.up.railway.app/api/productos/"
 
 
 

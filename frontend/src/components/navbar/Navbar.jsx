@@ -116,6 +116,7 @@ function Navbar({handleSort}) {
               <li className={styles.ordenar} onClick={() => handleClick("nuevos")} id="nuevos"  >Nuevos</li>
               <li className={styles.ordenar} onClick={() => handleClick("nombre")} id="nombre"  >Nombre</li>
               <li  className={styles.ordenar} onClick={() => handleClick("viejos")} id="viejos"  >Clasicos</li>
+              <li  className={styles.ordenar} onClick={() => handleClick("precio")} id="precio"  >Precio</li>
             </ul>
           </ul>
         </ul>

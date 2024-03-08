@@ -45,9 +45,22 @@ function Products() {
     });
   };
 
+  const sortByPrice = (dataToSort) => {
+    dataToSort.sort((a, b) => {
+      if (a.precio > b.precio) {
+        return 1;
+      }
+      if (a.precio < b.precio) {
+        return -1;
+      }
+      return 0;
+    });
+  };
+
   if (sorting == "nombre") sortByModel(data);
   if (sorting == "viejos") sortByOldest(data);
   if (sorting == "nuevos") sortByNew(data);
+  if (sorting == "precio") sortByPrice(data);
 
   return (
     <div className={styles.container}>

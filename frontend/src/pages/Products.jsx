@@ -6,7 +6,8 @@ import useTitle from "../hooks/useTitle";
 import { useState } from "react";
 
 function Products() {
-  const [sorting, setSorting] = useState();
+  useTitle({title: "Productos"})
+  const [sorting, setSorting] = useState("ultimospublicados");
 
 
   const { products } = useLoaderData();

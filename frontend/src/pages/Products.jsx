@@ -15,11 +15,11 @@ function Products() {
 
   const handleSorting = (sortBy) => {
    
-    if (sortBy == "nombre") sortByModel(data);
-    if (sortBy == "ultimospublicados") sortByOldest(data);
-    if (sortBy == "primerospublicados") sortByNew(data);
-    if (sortBy == "menorprecio") sortByMinusPrice(data);
-    if (sortBy == "mayorprecio") sortByMayorPrice(data);
+    if (sorting == "nombre") sortByModel(data);
+    if (sorting == "ultimospublicados") sortByOldest(data);
+    if (sorting == "primerospublicados") sortByNew(data);
+    if (sorting == "menorprecio") sortByMinusPrice(data);
+    if (sorting == "mayorprecio") sortByMayorPrice(data);
     setSorting(sortBy)
   
   };
@@ -73,9 +73,6 @@ function Products() {
   };
 
   const sortByMayorPrice = (dataToSort) => {
-
-    console.log("sortbymayor");
-
     dataToSort.sort((b, a) => {
       if (a.precio > b.precio) {
         return 1;

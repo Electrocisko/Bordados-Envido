@@ -101,8 +101,8 @@ function Products() {
           id="sort"
           onChange={(e) => handleSorting(e.target.value)}
         >
-          <option value="primerospublicados">Primeros Publicados</option>
           <option value="ultimospublicados">Ultimos Publicados</option>
+          <option value="primerospublicados">Primeros Publicados</option>
           <option value="menorprecio">Menor precio</option>
           <option value="mayorprecio">Mayor precio</option>
           <option value="nombre">Nombre</option>

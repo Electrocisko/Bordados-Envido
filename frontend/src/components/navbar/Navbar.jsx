@@ -74,7 +74,7 @@ function Navbar() {
               </li>
 
               <li>
-                <NavLink to="/productos/gorros"  onClick={() => setShowLinks(!showLinks)} >Gorras</NavLink>
+                <NavLink to="/productos/gorras"  onClick={() => setShowLinks(!showLinks)} >Gorras</NavLink>
               </li>
 
               <li>

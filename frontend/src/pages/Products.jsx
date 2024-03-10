@@ -7,21 +7,20 @@ import { useState } from "react";
 
 function Products() {
   useTitle({title: "Productos"})
+  // eslint-disable-next-line no-unused-vars
   const [sorting, setSorting] = useState("ultimospublicados");
-
 
   const { products } = useLoaderData();
   const { data } = products;
 
+
   const handleSorting = (sortBy) => {
-   
-    if (sorting == "nombre") sortByModel(data);
-    if (sorting == "ultimospublicados") sortByOldest(data);
-    if (sorting == "primerospublicados") sortByNew(data);
-    if (sorting == "menorprecio") sortByMinusPrice(data);
-    if (sorting == "mayorprecio") sortByMayorPrice(data);
+    if (sortBy == "nombre") sortByModel(data);
+    if (sortBy == "ultimospublicados") sortByOldest(data);
+    if (sortBy == "primerospublicados") sortByNew(data);
+    if (sortBy == "menorprecio") sortByMinusPrice(data);
+    if (sortBy == "mayorprecio") sortByMayorPrice(data);
     setSorting(sortBy)
-  
   };
 
   const sortByModel = (dataToSort) => {
@@ -37,7 +36,7 @@ function Products() {
   };
 
   const sortByOldest = (dataToSort) => {
-    dataToSort.sort((a, b) => {
+    dataToSort.sort((b, a) => {
       if (a.iat > b.iat) {
         return 1;
       }
@@ -49,7 +48,7 @@ function Products() {
   };
 
   const sortByNew = (dataToSort) => {
-    dataToSort.sort((b, a) => {
+    dataToSort.sort((a, b) => {
       if (a.iat > b.iat) {
         return 1;
       }
@@ -61,7 +60,7 @@ function Products() {
   };
 
   const sortByMinusPrice = (dataToSort) => {
-    dataToSort.sort((b, a) => {
+    dataToSort.sort((a, b) => {
       if (a.precio > b.precio) {
         return 1;
       }
@@ -73,7 +72,7 @@ function Products() {
   };
 
   const sortByMayorPrice = (dataToSort) => {
-    dataToSort.sort((a, b) => {
+    dataToSort.sort((b, a) => {
       if (a.precio > b.precio) {
         return 1;
       }
@@ -83,6 +82,8 @@ function Products() {
       return 0;
     });
   };
+
+
 
   return (
     <div className={styles.container}>
@@ -98,12 +99,12 @@ function Products() {
           id="sort"
           onChange={(e) => handleSorting(e.target.value)}
         >
-        
+         <option value="" selected>Seleccione</option>
           <option value="primerospublicados">Primeros Publicados</option>
           <option value="ultimospublicados">Ultimos Publicados</option>
           <option value="menorprecio">Menor precio</option>
           <option value="mayorprecio">Mayor precio</option>
-          <option value="nombre" selected>Nombre</option>
+          <option value="nombre" >Nombre</option>
         </select>
       </div>
 

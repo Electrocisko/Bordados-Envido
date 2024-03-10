@@ -101,7 +101,7 @@ function Products() {
         >
          <option value="" selected>Seleccione</option>
           <option value="primerospublicados">Primeros Publicados</option>
-          <option value="ultimospublicados">Ultimos Publicados</option>
+          <option value="ultimospublicados">Últimos Publicados</option>
           <option value="menorprecio">Menor precio</option>
           <option value="mayorprecio">Mayor precio</option>
           <option value="nombre" >Nombre</option>

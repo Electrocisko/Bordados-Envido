@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+
 import styles from "../scss/pages/products.module.scss";
 import Card from "../components/card/Card";
 import { useLoaderData } from "react-router-dom";
@@ -61,7 +61,7 @@ function Products() {
   };
 
   const sortByMinusPrice = (dataToSort) => {
-    dataToSort.sort((a, b) => {
+    dataToSort.sort((b, a) => {
       if (a.precio > b.precio) {
         return 1;
       }
@@ -73,7 +73,7 @@ function Products() {
   };
 
   const sortByMayorPrice = (dataToSort) => {
-    dataToSort.sort((b, a) => {
+    dataToSort.sort((a, b) => {
       if (a.precio > b.precio) {
         return 1;
       }
@@ -92,18 +92,18 @@ function Products() {
       </p>
       <div>
         <label htmlFor="sort">Ordenar por: </label>
-
         <select
           className={styles.option}
           name="sort"
           id="sort"
           onChange={(e) => handleSorting(e.target.value)}
         >
-          <option value="ultimospublicados">Ultimos Publicados</option>
+        
           <option value="primerospublicados">Primeros Publicados</option>
+          <option value="ultimospublicados">Ultimos Publicados</option>
           <option value="menorprecio">Menor precio</option>
           <option value="mayorprecio">Mayor precio</option>
-          <option value="nombre">Nombre</option>
+          <option value="nombre" selected>Nombre</option>
         </select>
       </div>
 

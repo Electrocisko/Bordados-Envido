@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 
 
 function WhatsappGlobe(props) {
@@ -21,6 +21,11 @@ function WhatsappGlobe(props) {
 </g>
 </svg>  
   )
+}
+
+WhatsappGlobe.propTypes = {
+	height: PropTypes.string,
+	width: PropTypes.string
 }
 
 export default WhatsappGlobe

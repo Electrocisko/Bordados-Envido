@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { useState } from "react";
 import Closed from "../icons/Closed";
 import Hamburguer from "../icons/Hamburguer";

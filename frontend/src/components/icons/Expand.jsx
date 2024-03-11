@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-
+import PropTypes from 'prop-types';
 
 function Expand(props) {
   return (
@@ -7,4 +6,11 @@ function Expand(props) {
   )
 }
 
+Expand.propTypes = {
+  fill: PropTypes.string,
+  height: PropTypes.string,
+  width: PropTypes.string
+}
+
 export default Expand
+

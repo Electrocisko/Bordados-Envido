@@ -1,13 +1,10 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import styles from "./card.module.scss";
 import dayjs from "dayjs";
 
-
 const url = "https://bordados-bacend-production.up.railway.app/images/"
 
-
 function Card(props) {  
-
   let lastUpdated = dayjs(props.iat);
   let today = dayjs().subtract(1,'month');
   let newPublicac;
@@ -17,7 +14,6 @@ function Card(props) {
   } else {
     newPublicac = false;
   }
-
 
   return (
     <div className={styles.cardContainer}>
@@ -41,5 +37,14 @@ function Card(props) {
     </div>
   );
 }
+
+Card.propTypes = {
+  iat: PropTypes.string,
+  image: PropTypes.string,
+  nostock: PropTypes.bool,
+  modelo: PropTypes.string,
+  precio: PropTypes.number
+}
+
 
 export default Card;

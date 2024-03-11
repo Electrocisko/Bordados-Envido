@@ -3,24 +3,39 @@ import styles from "../scss/pages/products.module.scss";
 import Card from "../components/card/Card";
 import { useLoaderData } from "react-router-dom";
 import useTitle from "../hooks/useTitle";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Products() {
   useTitle({title: "Productos"})
   // eslint-disable-next-line no-unused-vars
-  const [sorting, setSorting] = useState("ultimospublicados");
+ const [sorting, setSorting] = useState(false);
+
+  const selectSort = useRef();
+
+
 
   const { products } = useLoaderData();
   const { data } = products;
 
 
-  const handleSorting = (sortBy) => {
+
+  useEffect(() => {
+    console.log("use effect");
+  },[sorting])
+
+  const handleSorting = () => {
+
+    setSorting(!sorting)
+
+    
+    let sortBy = selectSort.current.value;
+
     if (sortBy == "nombre") sortByModel(data);
     if (sortBy == "ultimospublicados") sortByOldest(data);
     if (sortBy == "primerospublicados") sortByNew(data);
     if (sortBy == "menorprecio") sortByMinusPrice(data);
     if (sortBy == "mayorprecio") sortByMayorPrice(data);
-    setSorting(sortBy)
+ 
   };
 
   const sortByModel = (dataToSort) => {
@@ -97,11 +112,12 @@ function Products() {
           className={styles.option}
           name="sort"
           id="sort"
+          ref={selectSort}
           onChange={(e) => handleSorting(e.target.value)}
+       
         >
-         <option value="" selected>Seleccione</option>
-          <option value="primerospublicados">Primeros Publicados</option>
           <option value="ultimospublicados">Últimos Publicados</option>
+          <option value="primerospublicados">Primeros Publicados</option>
           <option value="menorprecio">Menor precio</option>
           <option value="mayorprecio">Mayor precio</option>
           <option value="nombre" >Nombre</option>

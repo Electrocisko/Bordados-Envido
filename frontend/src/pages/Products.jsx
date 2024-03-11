@@ -101,6 +101,7 @@ function Products() {
           id="sort"
           ref={selectSort}
           onChange={(e) => handleSorting(e.target.value)}
+          defaultValue={sorting}
         >
           <option value="ultimospublicados">Últimos Publicados</option>
           <option value="primerospublicados">Primeros Publicados</option>

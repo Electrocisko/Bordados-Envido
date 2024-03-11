@@ -1,42 +1,32 @@
-
 import styles from "../scss/pages/products.module.scss";
 import Card from "../components/card/Card";
 import { useLoaderData } from "react-router-dom";
 import useTitle from "../hooks/useTitle";
-import { useEffect, useRef, useState } from "react";
+import {  useRef, useState } from "react";
 
 function Products() {
-  useTitle({title: "Productos"})
-  // eslint-disable-next-line no-unused-vars
- const [sorting, setSorting] = useState(false);
+  useTitle({ title: "Productos" });
+
+  const [sorting, setSorting] = useState(false);
 
   const selectSort = useRef();
-
-
-
   const { products } = useLoaderData();
   const { data } = products;
 
-
-
-  useEffect(() => {
-    console.log("use effect");
-  },[sorting])
-
   const handleSorting = () => {
-
-    setSorting(!sorting)
-
-    
+    setSorting(!sorting);
     let sortBy = selectSort.current.value;
+    sortingData(sortBy)
+  };
 
+
+  const sortingData = (sortBy) => {
     if (sortBy == "nombre") sortByModel(data);
     if (sortBy == "ultimospublicados") sortByOldest(data);
     if (sortBy == "primerospublicados") sortByNew(data);
     if (sortBy == "menorprecio") sortByMinusPrice(data);
     if (sortBy == "mayorprecio") sortByMayorPrice(data);
- 
-  };
+  }
 
   const sortByModel = (dataToSort) => {
     dataToSort.sort((a, b) => {
@@ -98,8 +88,6 @@ function Products() {
     });
   };
 
-
-
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{products.category}</h1>
@@ -114,13 +102,12 @@ function Products() {
           id="sort"
           ref={selectSort}
           onChange={(e) => handleSorting(e.target.value)}
-       
         >
           <option value="ultimospublicados">Últimos Publicados</option>
           <option value="primerospublicados">Primeros Publicados</option>
           <option value="menorprecio">Menor precio</option>
           <option value="mayorprecio">Mayor precio</option>
-          <option value="nombre" >Nombre</option>
+          <option value="nombre">Nombre</option>
         </select>
       </div>
 

@@ -7,18 +7,15 @@ import {  useRef, useState } from "react";
 function Products() {
   useTitle({ title: "Productos" });
 
-  const [sorting, setSorting] = useState(false);
+  const [sorting, setSorting] = useState("ultimospublicados");
 
   const selectSort = useRef();
   const { products } = useLoaderData();
   const { data } = products;
 
   const handleSorting = () => {
-    setSorting(!sorting);
-    let sortBy = selectSort.current.value;
-    sortingData(sortBy)
+    setSorting(selectSort.current.value);
   };
-
 
   const sortingData = (sortBy) => {
     if (sortBy == "nombre") sortByModel(data);
@@ -87,6 +84,8 @@ function Products() {
       return 0;
     });
   };
+
+  sortingData(sorting)
 
   return (
     <div className={styles.container}>

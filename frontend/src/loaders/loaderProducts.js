@@ -1,5 +1,6 @@
+ import {urlBase} from "../apiserver/apiserver.js"
 
-const url ="https://bordados-server-production.up.railway.app/api/productos"
+const url = urlBase;
 
 export const loaderProducts = async () => {
   const res = await fetch(url);

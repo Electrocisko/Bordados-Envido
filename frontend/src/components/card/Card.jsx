@@ -3,7 +3,7 @@ import styles from "./card.module.scss";
 import dayjs from "dayjs";
 import {urlImages} from "../../apiserver/apiserver.js"
 
-//const url = "https://bordados-server-production.up.railway.app/images/"
+
 const url = urlImages;
 
 function Card(props) {  

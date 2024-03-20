@@ -26,7 +26,10 @@ app.set('views',__dirname+'/views');
 app.set('view engine', 'ejs');
 
 //Conectando a Base de Datos
-connection();
+
+    connection();
+
+
 
 // routes
 app.use('/', viewsRouter);
@@ -34,5 +37,5 @@ app.use('/api', productsRouter );
 app.use('/api', loginRouter);
 
 app.listen(PORT, () => {
-    console.log('server listening :'+PORT);
+    console.log(`http://localhost:${PORT}`);
 })

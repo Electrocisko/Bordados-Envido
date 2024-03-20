@@ -11,7 +11,6 @@ const productSchema = new Schema({
     image: String,
     iat: String,
     nostock: Boolean,
-
 })
 
 export  const Product = model("product", productSchema);

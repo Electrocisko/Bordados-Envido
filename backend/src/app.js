@@ -9,6 +9,7 @@ import loginRouter from "./routes/sessionsRouter.js";
 import connection from './database/connection.js';
 import cors from 'cors';
 import cookieParser from "cookie-parser";
+import usersRouter from "./routes/usersRouter.js";
 
 const PORT = dotenvConfig.app.PORT;
 const app = express();
@@ -35,6 +36,7 @@ app.set('view engine', 'ejs');
 app.use('/', viewsRouter);
 app.use('/api', productsRouter );
 app.use('/api', loginRouter);
+app.use('/api/user', usersRouter);
 
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);

@@ -124,7 +124,7 @@ export const modifiedProductById = async (req, res) => {
     data.iat = dayjs().format('DD/MM/YYYY, HH:mm');
 
     //Modifica imagen si es que hay
-    let modifiedProduct = await Product.findByIdAndUpdate(id, data);
+    let modifiedProduct = await Product.findByIdAndUpdate(id, data, {new: data});
   
 
     res.status(200).json({

@@ -14,7 +14,7 @@ const  loginController = async (req, res) => {
           res.cookie("jwt",token, { httpOnly: true, secure: true})
           res.status(200).json({
             status: "success",
-            message: "ok"
+            token: token
           });
         } else {
             throw new Error("Credenciales No Validos")

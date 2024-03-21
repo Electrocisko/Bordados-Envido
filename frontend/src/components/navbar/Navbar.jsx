@@ -7,6 +7,7 @@ import styles from "./navbar.module.scss";
 import { Link, NavLink } from "react-router-dom";
 import Expand from "../icons/Expand";
 import Retract from "../icons/Retract";
+import User from "../icons/User";
 
 function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
@@ -84,9 +85,10 @@ function Navbar() {
                 <NavLink to="/productos/otros"  onClick={() => setShowLinks(!showLinks)} >Otros</NavLink>
               </li>
             </ul>
+       
           </ul>
 
-        
+          <li><Link to="/registro"><User height="35px" width="35px" color="white"/></Link></li>
         </ul>
       </div>
 

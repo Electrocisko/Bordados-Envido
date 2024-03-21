@@ -1,1 +1,0 @@
-{"version":3,"sources":["../frontend/src/scss/abstract/_variables.scss","footer.module.css","../frontend/src/components/footer/footer.module.scss"],"names":[],"mappings":"AACU,oGAAA;AAGA,4GAAA;AAOV;EACE,yCAAA;EACA,8BAAA;EACA,0BAAA;EACA,+BAAA;EACA,wCAAA;ACRF;;ACNA;EAEI,kBAAA;EACA,eAAA;ADQJ;ADiBI;EE5BJ;IAQI,kBAAA;IACA,WAAA;IACA,SAAA;EDOF;AACF","file":"footer.module.css"}

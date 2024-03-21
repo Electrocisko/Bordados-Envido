@@ -4,10 +4,10 @@ import {getUsers, createUser,getUserById, updateUser} from "../controllers/users
 import auth from "../middlewares/auth.js";
 
 
-router.get("/", auth, getUsers);
-router.get("/:id",auth, getUserById);
+router.get("/", auth, getUsers); //privado
+router.get("/:id",auth, getUserById);//privado
 
-router.post("/", auth, createUser);
-router.patch("/:id",auth, updateUser);
+router.post("/", createUser);//publico
+router.patch("/:id",auth, updateUser);//privado
 
 export default router;

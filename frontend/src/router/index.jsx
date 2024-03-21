@@ -7,6 +7,7 @@ import LayoutPublic from '../layout/LayoutPublic';
 import NotFound from '../pages/NotFound';
 import { loaderProducts } from '../loaders/loaderProducts';
 import {loaderProductsByCat} from "../loaders/loaderProductsByCat"
+import Register from '../pages/Register';
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +41,11 @@ export const router = createBrowserRouter([
                 element: <Products/>,
                 loader: loaderProductsByCat,
                 errorElement: <NotFound/>,
+            },
+            {
+                path:"/registro",
+                element: <Register/>,
+                errorElement: <NotFound/>
             }
         ]
     }

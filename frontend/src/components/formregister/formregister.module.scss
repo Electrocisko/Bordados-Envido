@@ -1,0 +1,14 @@
+@import "../../scss/abstract/variables";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 5px;
+}
+
+.submit {
+    border: solid black 1px;
+    margin-top: 10px;
+    padding: 5px;
+}

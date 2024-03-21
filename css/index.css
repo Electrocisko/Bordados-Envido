@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sriracha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sriracha&display=swap");
+:root {
+  --font-personal: "Montserrat", sans-serif;
+  --color-Navbar: hsl(0, 0%, 8%);
+  --color-Navbar_font: white;
+  --color-Rosa: hsl(37, 66%, 93%);
+  --color-Logo-oscuro: hsl(190, 100%, 14%);
+}
+
+:root {
+  --font-personal: "Montserrat", sans-serif;
+  --color-Navbar: hsl(0, 0%, 8%);
+  --color-Navbar_font: white;
+  --color-Rosa: hsl(37, 66%, 93%);
+  --color-Logo-oscuro: hsl(190, 100%, 14%);
+}
+
+html, body {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(190, 100%, 14%);
+  min-height: 100%;
+  position: relative;
+}
+
+p {
+  font-size: 16px;
+}
+
+body {
+  min-height: 80vh;
+  background-color: hsl(37, 66%, 93%);
+}
+
+.loadingContainer {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  z-index: 100;
+}
+
+.navbarFixed {
+  margin-top: 100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+}/*# sourceMappingURL=index.css.map */

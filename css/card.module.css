@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sriracha&display=swap");
+:root {
+  --font-personal: "Montserrat", sans-serif;
+  --color-Navbar: hsl(0, 0%, 8%);
+  --color-Navbar_font: white;
+  --color-Rosa: hsl(37, 66%, 93%);
+  --color-Logo-oscuro: hsl(190, 100%, 14%);
+}
+
+.cardContainer {
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 5px;
+}
+
+.price {
+  text-align: center;
+}
+
+.imageContainer {
+  height: 100%;
+  position: relative;
+}
+
+.image {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .image {
+    position: relative;
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+.textoImagen {
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  padding: 10px;
+  background-color: cornsilk;
+  color: red;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.7;
+  transform: rotate(-45deg);
+}
+
+#triangleTopleft {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  border-top: 100px solid #17d90d;
+  border-right: 100px solid transparent;
+}
+
+.textBlock {
+  color: white;
+  position: relative;
+  top: -60px;
+  left: 15px;
+  font-weight: bold;
+  padding: 5px;
+  transform: rotate(-45deg);
+}/*# sourceMappingURL=card.module.css.map */

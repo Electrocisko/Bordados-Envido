@@ -1,4 +1,6 @@
 
-export const urlBase = "https://bordados-server-production.up.railway.app/api/productos"
+export const urlBase = "http://localhost:8080/api/productos"
 
-export const urlImages = "https://bordados-server-production.up.railway.app/images/"
+export const urlImages = "http://localhost:8080/images/"
+
+export const urlRegister = "http://localhost:8080/api/user"

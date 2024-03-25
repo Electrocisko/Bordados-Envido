@@ -90,6 +90,7 @@ function FormRegister() {
       <input
         type="password"
         name="checkpassword"
+        id="checkpassword"
         required={true}
         placeholder="Reingrese password"
         value={formData.checkpassword}

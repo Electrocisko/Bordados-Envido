@@ -5,6 +5,10 @@
     flex-direction: column;
     width: 40%;
     gap: 5px;
+
+    input {
+        padding: 3px;
+    }
 }
 
 .submit {
